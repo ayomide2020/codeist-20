@@ -21,9 +21,7 @@
                 dark
                 flat
               >
-
-                <v-toolbar-title>{{ email }}</v-toolbar-title>
-
+                <v-toolbar-title>Login form</v-toolbar-title>
                 <v-spacer />
                 <v-tooltip bottom>
                   <template v-slot:activator="{ on }">

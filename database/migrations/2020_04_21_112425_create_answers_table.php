@@ -18,6 +18,7 @@ class CreateAnswersTable extends Migration
             $table->text('content');
             $table->integer('user_id')->unsigned();
             $table->integer('question_id')->unsigned();
+            // $table->integer('status')->comment('0 => deleted, 1 => active');
             $table->text('answer');
             $table->timestamps();
         });

@@ -21,6 +21,7 @@ class CreateQuestionsTable extends Migration
             $table->string('tag_ids');
             $table->string('question');
             $table->string('level')->default('Beginner');
+            // $table->integer('status')->comment('0 => deleted, 1 => active, 2 => duplicated');
             $table->boolean('solved')->default(false);
             $table->timestamps();
         });
