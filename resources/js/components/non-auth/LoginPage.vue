@@ -70,7 +70,6 @@
                     prepend-icon="lock"
                     type="password"
                   />
-
                 </form>
               </v-card-text>
               <v-card-actions>

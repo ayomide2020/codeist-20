@@ -56,7 +56,6 @@
               </v-toolbar>
               <v-card-text>
                 <form>
-
                   <v-text-field
                     label="First Name" required
                     name="firstname"
@@ -99,7 +98,6 @@
                     prepend-icon="lock"
                     type="password"
                   />
-
                 </form>
               </v-card-text>
               <v-card-actions>
