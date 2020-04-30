@@ -16,9 +16,9 @@ class CreateQuestionsTable extends Migration
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->longText('question');
             $table->integer('user_id')->unsigned();
             $table->string('tag_ids');
+            $table->longText('question');
             $table->string('level')->default('Beginner');
             $table->boolean('solved')->default(false);
             $table->timestamps();

@@ -120,6 +120,7 @@ export default {
   },
 
   mounted(){
+      this.fetchQuestions();
   },
 
   data: () => ({
@@ -135,6 +136,15 @@ export default {
   }),
 
   methods:{
+      fetchQuestions(){
+        axios.get('/questions')
+        .then((res) => {
+            console.log(res.data);
+            this.questions = res.data;
+        })
+        .catch(err => console.log(err))
+    },
+
     mode(){
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
     },
