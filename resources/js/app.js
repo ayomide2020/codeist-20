@@ -37,7 +37,11 @@ Vue.component('validation-error', require('./components/non-auth/ValidationError
 // Auth
 Vue.component('dashboard-component', require('./components/auth/Dashboard.vue').default);
 Vue.component('ask_question-component', require('./components/auth/AskQuestion.vue').default);
+<<<<<<< HEAD
 Vue.component('single_question-component', require('./components/auth/SingleQuestion.vue').default);
+=======
+Vue.component('answer_question-component', require('./components/auth/AnswerQuestion.vue').default);
+>>>>>>> 764eb1f3c4397f71bf0ae877877b45f07792e638
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
