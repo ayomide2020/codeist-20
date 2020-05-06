@@ -98812,6 +98812,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 Vue.use(vuetify__WEBPACK_IMPORTED_MODULE_0___default.a); // Vue.use(VueClipboard);
 // Vue.use(VueClipboard);
+// Vue.use(VueClipboard);
 
 /**
  * The following block of code may be used to automatically register your
@@ -98840,6 +98841,7 @@ Vue.component('ask_question-component', __webpack_require__(/*! ./components/aut
 Vue.component('single_question-component', __webpack_require__(/*! ./components/auth/SingleQuestion.vue */ "./resources/js/components/auth/SingleQuestion.vue")["default"]);
 Vue.component('tag-component', __webpack_require__(/*! ./components/auth/Tag.vue */ "./resources/js/components/auth/Tag.vue")["default"]);
 Vue.component('job_card-component', __webpack_require__(/*! ./components/auth/JobCard.vue */ "./resources/js/components/auth/JobCard.vue")["default"]);
+Vue.component('tag-component', __webpack_require__(/*! ./components/auth/Tag.vue */ "./resources/js/components/auth/Tag.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

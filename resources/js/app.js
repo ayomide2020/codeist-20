@@ -11,6 +11,8 @@ import Vuetify from 'vuetify';
 Vue.use(Vuetify);
 // Vue.use(VueClipboard);
 // Vue.use(VueClipboard);
+// Vue.use(VueClipboard);
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -41,6 +43,7 @@ Vue.component('ask_question-component', require('./components/auth/AskQuestion.v
 Vue.component('single_question-component', require('./components/auth/SingleQuestion.vue').default);
 Vue.component('tag-component', require('./components/auth/Tag.vue').default);
 Vue.component('job_card-component', require('./components/auth/JobCard.vue').default);
+Vue.component('tag-component', require('./components/auth/Tag.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -54,6 +57,7 @@ Vue.component('job_card-component', require('./components/auth/JobCard.vue').def
         icons: {
             iconfont: 'mdi', // default - only for display purposes
           },
-     }),     
- });
+ }),
+     
+});
      
