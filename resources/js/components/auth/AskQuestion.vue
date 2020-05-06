@@ -76,7 +76,6 @@
                     :taggable="true"
                     @tag="addTag"
                   ></multiselect>
-
                 </div>
 
                 <a class="btn btn-outline-primary mt-5" @click="postQuestion">Publish Question</a>

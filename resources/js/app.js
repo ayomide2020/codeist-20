@@ -9,7 +9,10 @@ require('./bootstrap');
 window.Vue = require('vue');
 import Vuetify from 'vuetify';
 Vue.use(Vuetify);
+<<<<<<< HEAD
 // Vue.use(VueClipboard);
+=======
+>>>>>>> eff1e587fbb12c014d3f325de6550f8abc530433
 
 /**
  * The following block of code may be used to automatically register your
@@ -39,7 +42,10 @@ Vue.component('validation-error', require('./components/non-auth/ValidationError
 Vue.component('dashboard-component', require('./components/auth/Dashboard.vue').default);
 Vue.component('ask_question-component', require('./components/auth/AskQuestion.vue').default);
 Vue.component('single_question-component', require('./components/auth/SingleQuestion.vue').default);
+<<<<<<< HEAD
 Vue.component('tag-component', require('./components/auth/Tag.vue').default);
+=======
+>>>>>>> eff1e587fbb12c014d3f325de6550f8abc530433
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -54,5 +60,9 @@ Vue.component('tag-component', require('./components/auth/Tag.vue').default);
             iconfont: 'mdi', // default - only for display purposes
           },
      }),
+<<<<<<< HEAD
      
  });
+=======
+ });
+>>>>>>> eff1e587fbb12c014d3f325de6550f8abc530433

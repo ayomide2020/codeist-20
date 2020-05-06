@@ -1,7 +1,11 @@
 <template>
   <nav class="bg navbar navbar-dark fixed-top py-5">
     <div
+<<<<<<< HEAD
       class="cta d-flex justify-content-between col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 px-0"
+=======
+      class="d-flex justify-content-between col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 px-0"
+>>>>>>> eff1e587fbb12c014d3f325de6550f8abc530433
     >
       <slot name="extra"></slot>
 
