@@ -1,7 +1,20 @@
 <template>
   <nav class="bg navbar navbar-dark fixed-top py-5">
     <div
+<<<<<<< HEAD
       class="cta d-flex justify-content-between col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 px-0">
+=======
+<<<<<<< HEAD
+      class="cta d-flex justify-content-between col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 px-0">
+=======
+<<<<<<< HEAD
+      class="cta d-flex justify-content-between col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 px-0"
+=======
+      class="d-flex justify-content-between col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 px-0"
+>>>>>>> eff1e587fbb12c014d3f325de6550f8abc530433
+    >
+>>>>>>> af2f7b16223a80780da2601720c032de6cfdb7f2
+>>>>>>> 4b04d9156adf1afc826ae3c484f3609629f1e360
       <slot name="extra"></slot>
 
       <div class="align-items-center">

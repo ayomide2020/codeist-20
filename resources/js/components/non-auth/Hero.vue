@@ -60,7 +60,7 @@
     border-radius: 0%;
     transition: .5s all;
     transition-timing-function: ease-in-out;
-    transition-property: 'background', 'color', 'outline';
+    transition-property: 'bacground', 'color', 'outline';
 }
 
 .btn-codeist-outline-porpu:hover{

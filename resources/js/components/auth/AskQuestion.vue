@@ -224,6 +224,10 @@ export default {
   data: () => ({
     success: "",
     title: "",
+<<<<<<< HEAD
+=======
+    question: "",
+>>>>>>> 4b04d9156adf1afc826ae3c484f3609629f1e360
     tags: [],
     user: {},
     options: [],
