@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-color px-4 sticky-top">
        <div class="container-fluid px-5">
            <!-- <a class="navbar-brand text-dark" href="/"><img src="canvas/favicon.ico" width="150" height="150" alt="favicon"></a> -->
 
@@ -16,10 +16,10 @@
                     <a class="nav-link text-white" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item mr-5">
-                    <a class="nav-link" href="/login">Sign In</a>
+                    <a class="nav-link text-white" href="/login">Sign In</a>
                 </li>
                 <li class="nav-item mr-5">
-                    <a class="nav-link" href="/register">Sign Up</a>
+                    <a class="nav-link text-white" href="/register">Sign Up</a>
                 </li>
                 </ul>
             </div>
@@ -46,7 +46,7 @@
     padding-right: 20px;
 }
 
-.bg-white{
-    background: #fff;;
+.bg-color{
+    background: #6c63ff;
 }
 </style>

@@ -72,6 +72,7 @@
     font-family: 'Courier';
     font-size: 40px;
     font-weight: bold;
+    margin-top: 80px;
 }
 
 .hero-text{

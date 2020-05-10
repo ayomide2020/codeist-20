@@ -2378,9 +2378,300 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/auth/AskQuestion.vue?vue&type=script&lang=js& ***!
   \***************************************************************************************************************************************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\laragon\\www\\codeist\\resources\\js\\components\\auth\\AskQuestion.vue: Unexpected token (227:0)\n\n\u001b[0m \u001b[90m 225 | \u001b[39m    success\u001b[33m:\u001b[39m \u001b[32m\"\"\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 226 | \u001b[39m    title\u001b[33m:\u001b[39m \u001b[32m\"\"\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 227 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     | \u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 228 | \u001b[39m\u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 229 | \u001b[39m    question\u001b[33m:\u001b[39m \u001b[32m\"\"\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 230 | \u001b[39m\u001b[33m>>>\u001b[39m\u001b[33m>>>\u001b[39m\u001b[33m>\u001b[39m \u001b[35m4\u001b[39mb04d9156adf1afc826ae3c484f3609629f1e360\u001b[0m\n    at Parser._raise (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:742:17)\n    at Parser.raiseWithData (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:735:17)\n    at Parser.raise (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:729:17)\n    at Parser.unexpected (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:8757:16)\n    at Parser.parseIdentifierName (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:10748:18)\n    at Parser.parseIdentifier (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:10726:23)\n    at Parser.parseMaybePrivateName (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:10079:19)\n    at Parser.parsePropertyName (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:10550:126)\n    at Parser.parseObjectMember (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:10451:10)\n    at Parser.parseObj (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:10374:25)\n    at Parser.parseExprAtom (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:9995:28)\n    at Parser.parseExprSubscripts (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:9602:23)\n    at Parser.parseMaybeUnary (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:9582:21)\n    at Parser.parseExprOps (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:9452:23)\n    at Parser.parseMaybeConditional (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:9425:23)\n    at Parser.parseMaybeAssign (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:9380:21)\n    at Parser.parseParenAndDistinguishExpression (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:10193:28)\n    at Parser.parseExprAtom (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:9947:21)\n    at Parser.parseExprSubscripts (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:9602:23)\n    at Parser.parseMaybeUnary (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:9582:21)\n    at Parser.parseExprOps (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:9452:23)\n    at Parser.parseMaybeConditional (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:9425:23)\n    at Parser.parseMaybeAssign (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:9380:21)\n    at Parser.parseFunctionBody (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:10627:24)\n    at Parser.parseArrowExpression (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:10603:10)\n    at Parser.parseParenAndDistinguishExpression (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:10221:12)\n    at Parser.parseExprAtom (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:9947:21)\n    at Parser.parseExprSubscripts (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:9602:23)\n    at Parser.parseMaybeUnary (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:9582:21)\n    at Parser.parseExprOps (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:9452:23)\n    at Parser.parseMaybeConditional (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:9425:23)\n    at Parser.parseMaybeAssign (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:9380:21)\n    at Parser.parseObjectProperty (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:10512:101)\n    at Parser.parseObjPropValue (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:10537:101)\n    at Parser.parseObjectMember (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:10461:10)\n    at Parser.parseObj (C:\\laragon\\www\\codeist\\node_modules\\@babel\\parser\\lib\\index.js:10374:25)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _tinymce_tinymce_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @tinymce/tinymce-vue */ "./node_modules/@tinymce/tinymce-vue/lib/es2015/main/ts/index.js");
+/* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-multiselect */ "./node_modules/vue-multiselect/dist/vue-multiselect.min.js");
+/* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_multiselect__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _non_auth_ValidationError__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../non-auth/ValidationError */ "./resources/js/components/non-auth/ValidationError.vue");
+/* harmony import */ var _JobCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./JobCard */ "./resources/js/components/auth/JobCard.vue");
+/* harmony import */ var _NavbarComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./NavbarComponent */ "./resources/js/components/auth/NavbarComponent.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    source: String
+  },
+  components: {
+    editor: _tinymce_tinymce_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Multiselect: vue_multiselect__WEBPACK_IMPORTED_MODULE_1___default.a,
+    validationError: _non_auth_ValidationError__WEBPACK_IMPORTED_MODULE_2__["default"],
+    JobCard: _JobCard__WEBPACK_IMPORTED_MODULE_3__["default"],
+    NavbarComponent: _NavbarComponent__WEBPACK_IMPORTED_MODULE_4__["default"]
+  },
+  mounted: function mounted() {
+    this.fetchTags();
+    this.getUser();
+  },
+  data: function data() {
+    return {
+      success: "",
+      title: "",
+      tags: [],
+      user: {},
+      options: [],
+      validationErrors: ""
+    };
+  },
+  methods: {
+    addTag: function addTag(newTag) {
+      var tag = {
+        name: newTag,
+        code: newTag.substring(0, 2) + Math.floor(Math.random() * 10000000)
+      };
+      this.options.push(tag);
+      this.tags.push(tag);
+    },
+    fetchTags: function fetchTags() {
+      var _this = this;
+
+      axios.get("/tags").then(function (res) {
+        console.log(res.data);
+        _this.options = res.data;
+      })["catch"](function (err) {
+        return console.log(err);
+      });
+    },
+    getUser: function getUser() {
+      var _this2 = this;
+
+      axios.get("/user").then(function (res) {
+        console.log(res.data);
+        _this2.user = res.data;
+      })["catch"](function (err) {
+        return console.log(err);
+      });
+    },
+    postQuestion: function postQuestion() {
+      var _this3 = this;
+
+      var data = {
+        user_id: this.user.id,
+        title: this.title,
+        tag_ids: this.tags,
+        question: this.question
+      };
+      axios.post("/question", data).then(function (res) {
+        console.log(res.data);
+        _this3.success = res.data.message;
+        _this3.title = "";
+        _this3.question = "";
+        _this3.tags = [];
+        location = "/question/" + res.data.id;
+      })["catch"](function (error) {
+        if (error.response.status == 422) {
+          console.log(error.response.data.errors);
+          _this3.validationErrors = error.response.data.errors;
+        }
+
+        console.log(error.response);
+      });
+    }
+  }
+});
 
 /***/ }),
 
@@ -3000,7 +3291,7 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         icon: "mdi-history",
         text: "Job",
-        href: "/jobs"
+        href: "/job"
       }, {
         icon: "mdi-settings",
         text: "Settings",
@@ -9171,7 +9462,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".d-card{\n  position: relative;\n  display: flex;\n  min-width: 0;\n  word-wrap: break-word;\n  background-color: #fff;\n  background-clip: border-box;\n  border: 1px solid rgba(0, 0, 0, 0.125);\n  border-radius: 0.25rem;\n}\n.codeist-mtb-10{\n  margin-top: 10%;\n  margin-bottom: 10%;\n  font-family: 'Courier';\n  font-size: 17px;\n}\n.d-card{\n  font-family: 'Arial';\n}\n.codeist-card{\n  background: #fff !important;\n  box-shadow: 1px 2px 8px rgba(0,0,0,0.5);\n}\n.display-grid{\n  position: relative;\n}\n.display-grid:after {\n  content: \"\";\n  position: absolute;\n  border-top: 5px solid #ffbe54;\n  left: 45%;\n  bottom: -20px;\n  width: 10%;\n  border-radius: 10px;\n  height: 0px;\n}\r\n\r\n", ""]);
+exports.push([module.i, ".d-card{\n  position: relative;\n  display: flex;\n  min-width: 0;\n  word-wrap: break-word;\n  background-color: #fff;\n  background-clip: border-box;\n  border: 1px solid rgba(0, 0, 0, 0.125);\n  border-radius: 0.25rem;\n}\n.codeist-mtb-10{\n  margin-top: 10%;\n  margin-bottom: 10%;\n  font-family: 'Courier';\n  font-size: 17px;\n}\n.d-card{\n  font-family: 'Arial';\n}\n.codeist-card{\n  background: #fff !important;\n  box-shadow: 1px 2px 8px rgba(0,0,0,0.5);\n}\n.display-grid{\n  position: relative;\n}\n.display-grid:after {\n  content: \"\";\n  position: absolute;\n  border-top: 5px solid #ffbe54;\n  left: 45%;\n  bottom: -20px;\n  width: 10%;\n  border-radius: 10px;\n  height: 0px;\n}\n.hero-text{\n  font-size: 20px;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -9247,7 +9538,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "/* #6C63FF */\n.mtb-5{\n  margin-top: 5em;\n  margin-bottom: 5em;\n}\n.hero{\n  background:#fff !important;\n  /* background:red !important; */\n}\n.btn-codeist-round{\n  border-top-left-radius: 20px !important;\n  border-top-right-radius: 20px !important;\n  border-bottom-left-radius: 20px !important;\n  border-bottom-right-radius: 20px !important;\n}\n.btn-codeist-sandy{\n  background: #ffbe54 !important;\n}\n.btn-codeist-porpu{\n  background: #6C63FF !important;\n}\n.btn-codeist-outline-porpu{\n  outline: 1px solid #6C63FF !important;\n  border-radius: 0%;\n  transition: .5s all;\n  transition-timing-function: ease-in-out;\n  transition-property: 'bacground', 'color', 'outline';\n}\n.btn-codeist-outline-porpu:hover{\n  background: #6C63FF !important;\n  color: #fff;\n}\n.hero-heading{\n  font-family: 'Courier';\n  font-size: 40px;\n  font-weight: bold;\n}\n.hero-text{\n  font-size: 20px;\n}\r\n\r\n", ""]);
+exports.push([module.i, "/* #6C63FF */\n.mtb-5{\n  margin-top: 5em;\n  margin-bottom: 5em;\n}\n.hero{\n  background:#fff !important;\n  /* background:red !important; */\n}\n.btn-codeist-round{\n  border-top-left-radius: 20px !important;\n  border-top-right-radius: 20px !important;\n  border-bottom-left-radius: 20px !important;\n  border-bottom-right-radius: 20px !important;\n}\n.btn-codeist-sandy{\n  background: #ffbe54 !important;\n}\n.btn-codeist-porpu{\n  background: #6C63FF !important;\n}\n.btn-codeist-outline-porpu{\n  outline: 1px solid #6C63FF !important;\n  border-radius: 0%;\n  transition: .5s all;\n  transition-timing-function: ease-in-out;\n  transition-property: 'bacground', 'color', 'outline';\n}\n.btn-codeist-outline-porpu:hover{\n  background: #6C63FF !important;\n  color: #fff;\n}\n.hero-heading{\n  font-family: 'Courier';\n  font-size: 40px;\n  font-weight: bold;\n  margin-top: 80px;\n}\n.hero-text{\n  font-size: 20px;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -9266,7 +9557,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".active[data-v-7569cb91]{\n  background-color: #ffbe54 !important;\n  border-top-left-radius: 20px !important;\n  border-top-right-radius: 20px !important;\n  border-bottom-left-radius: 20px !important;\n  border-bottom-right-radius: 20px !important;\n  padding-left: 20px;\n  padding-right: 20px;\n}\n.bg-white[data-v-7569cb91]{\n  background: #fff;\n}\r\n", ""]);
+exports.push([module.i, ".active[data-v-7569cb91]{\n  background-color: #ffbe54 !important;\n  border-top-left-radius: 20px !important;\n  border-top-right-radius: 20px !important;\n  border-bottom-left-radius: 20px !important;\n  border-bottom-right-radius: 20px !important;\n  padding-left: 20px;\n  padding-right: 20px;\n}\n.bg-color[data-v-7569cb91]{\n  background: #6c63ff;\n}\r\n", ""]);
 
 // exports
 
@@ -43854,10 +44145,12 @@ var staticRenderFns = [
           _vm._v("For Developers, by Developers")
         ]),
         _vm._v(" "),
-        _c("p", { staticClass: "mt-5" }, [
-          _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ab magnam labore quibusdam facilis culpa temporibus. In ratione, nostrum harum labore excepturi corporis provident rem vel. Corrupti veniam dolore voluptate?"
-          )
+        _c("h3", [
+          _c("p", { staticClass: "mt-5 hero-text font-serif" }, [
+            _vm._v(
+              "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ab magnam labore quibusdam facilis culpa temporibus. In ratione, nostrum harum labore excepturi corporis provident rem vel. Corrupti veniam dolore voluptate?"
+            )
+          ])
         ]),
         _vm._v(" "),
         _c(
@@ -44922,7 +45215,7 @@ var staticRenderFns = [
       "nav",
       {
         staticClass:
-          "navbar navbar-expand-lg navbar-light bg-white px-4 sticky-top"
+          "navbar navbar-expand-lg navbar-light bg-color px-4 sticky-top"
       },
       [
         _c("div", { staticClass: "container-fluid px-5" }, [
@@ -44985,7 +45278,10 @@ var staticRenderFns = [
                 _c("li", { staticClass: "nav-item mr-5" }, [
                   _c(
                     "a",
-                    { staticClass: "nav-link", attrs: { href: "/login" } },
+                    {
+                      staticClass: "nav-link text-white",
+                      attrs: { href: "/login" }
+                    },
                     [_vm._v("Sign In")]
                   )
                 ]),
@@ -44993,7 +45289,10 @@ var staticRenderFns = [
                 _c("li", { staticClass: "nav-item mr-5" }, [
                   _c(
                     "a",
-                    { staticClass: "nav-link", attrs: { href: "/register" } },
+                    {
+                      staticClass: "nav-link text-white",
+                      attrs: { href: "/register" }
+                    },
                     [_vm._v("Sign Up")]
                   )
                 ])
@@ -99317,14 +99616,15 @@ __webpack_require__.r(__webpack_exports__);
 /*!******************************************************!*\
   !*** ./resources/js/components/auth/AskQuestion.vue ***!
   \******************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _AskQuestion_vue_vue_type_template_id_310919c3_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AskQuestion.vue?vue&type=template&id=310919c3&scoped=true& */ "./resources/js/components/auth/AskQuestion.vue?vue&type=template&id=310919c3&scoped=true&");
 /* harmony import */ var _AskQuestion_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AskQuestion.vue?vue&type=script&lang=js& */ "./resources/js/components/auth/AskQuestion.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var vue_multiselect_dist_vue_multiselect_min_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-multiselect/dist/vue-multiselect.min.css?vue&type=style&index=0&lang=css& */ "./node_modules/vue-multiselect/dist/vue-multiselect.min.css?vue&type=style&index=0&lang=css&");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _AskQuestion_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _AskQuestion_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var vue_multiselect_dist_vue_multiselect_min_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-multiselect/dist/vue-multiselect.min.css?vue&type=style&index=0&lang=css& */ "./node_modules/vue-multiselect/dist/vue-multiselect.min.css?vue&type=style&index=0&lang=css&");
 /* harmony import */ var _AskQuestion_vue_vue_type_style_index_1_id_310919c3_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AskQuestion.vue?vue&type=style&index=1&id=310919c3&scoped=true&lang=css& */ "./resources/js/components/auth/AskQuestion.vue?vue&type=style&index=1&id=310919c3&scoped=true&lang=css&");
 /* harmony import */ var _AskQuestion_vue_vue_type_style_index_2_id_310919c3_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./AskQuestion.vue?vue&type=style&index=2&id=310919c3&scoped=true&lang=css& */ "./resources/js/components/auth/AskQuestion.vue?vue&type=style&index=2&id=310919c3&scoped=true&lang=css&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
@@ -99360,7 +99660,7 @@ component.options.__file = "resources/js/components/auth/AskQuestion.vue"
 /*!*******************************************************************************!*\
   !*** ./resources/js/components/auth/AskQuestion.vue?vue&type=script&lang=js& ***!
   \*******************************************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

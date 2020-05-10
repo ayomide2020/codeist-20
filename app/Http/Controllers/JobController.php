@@ -28,7 +28,7 @@ class JobController extends Controller
 
 
         return response()->json([
-            'jobs' => $jobs,
+            'job' => $jobs,
         ]);
     }
 
@@ -62,8 +62,7 @@ class JobController extends Controller
 
         if($createJob){
             return response()->json([
-                "message" => "Your Job: $request->title, has been posted Successfully!", 
-                "id" => $createJob->id,
+                "message" => "Your Job: $request->title, has been posted Successfully!",
             ]);
         }
 

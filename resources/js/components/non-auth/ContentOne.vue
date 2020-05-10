@@ -3,7 +3,7 @@
 
         <h2 class="font-weight-bold fa-2x display-grid mt-3">For Developers, by Developers</h2>
 
-        <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ab magnam labore quibusdam facilis culpa temporibus. In ratione, nostrum harum labore excepturi corporis provident rem vel. Corrupti veniam dolore voluptate?</p>
+        <h3><p class="mt-5 hero-text font-serif">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ab magnam labore quibusdam facilis culpa temporibus. In ratione, nostrum harum labore excepturi corporis provident rem vel. Corrupti veniam dolore voluptate?</p></h3>
 
         <div class="mt-4 m-0 p-xl-3 p-lg-3 p-2 row justify-content-center justify-content-lg-between justify-content-md-start justify-content-sm-center">
 
@@ -121,6 +121,9 @@
   width: 10%;
   border-radius: 10px;
   height: 0px;
+}
+.hero-text{
+    font-size: 20px;
 }
 
 </style>

@@ -73,7 +73,7 @@ export default {
       { icon: "mdi-message-text", text: "Question", href: "/question" },
       { icon: "mdi-content-copy", text: "Tags", href: "/tag" },
       { icon: "mdi-contact-mail", text: "Article World", href: "/canvas" },
-      { icon: "mdi-history", text: "Job", href: "/jobs" },
+      { icon: "mdi-history", text: "Job", href: "/job" },
       { icon: "mdi-settings", text: "Settings", href: "/settings" }
     ],
   }),
