@@ -28,7 +28,7 @@ class JobController extends Controller
 
 
         return response()->json([
-            'job' => $jobs,
+            'jobs' => $jobs,
         ]);
     }
 
