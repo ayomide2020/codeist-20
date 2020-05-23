@@ -6,7 +6,7 @@
             <div class="mtb-5 col-xl-6 col-lg-6 col-md-12 p-2 p-xl-3 p-lg-3 p-md-5">
                 <h5 class="hero-heading">We Love People who Code</h5>
                 <p class="hero-text mt-xl-4 mt-lg-3 mt-md-3 mt-sm-3 mt-2">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima possimus neque necessitatibus enim facilis aspernatur praesentium dolor voluptas libero fuga nihil, vel, esse incidunt a voluptatum nostrum eaque vitae maxime?
+                    We build products that empower developers and connect them to solutions that enable productivity, growth, and discovery.
                 </p>
                 <a href="/register" class="mt-4 px-4 py-2 px-xl-5 px-lg-5 py-xl-3 py-lg-3 btn btn-codeist-outline-porpu text-black font-weight-bold">GET STARTED!</a>
             </div>

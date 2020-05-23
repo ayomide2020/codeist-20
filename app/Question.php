@@ -1,7 +1,6 @@
 <?php
 
 namespace App;
-
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -15,7 +14,7 @@ class Question extends Model
         'tag_ids' => 'array'
     ];
 
-    protected $appends = ['date', 'answerss', 'votecount'];
+    protected $appends = ['date', 'answerss', 'votecount', 'viewcount'];
 
     public function getDateAttribute()
     {
@@ -30,6 +29,10 @@ class Question extends Model
     public function getVotecountAttribute()
     {
         return $this->vote ? $this->vote->vote : "0";
+    }
+    public function getViewcountAttribute()
+    {
+        return $this->view;
     }
 
     public function answers()
@@ -46,4 +49,10 @@ class Question extends Model
     {
         return $this->hasOne(Vote::class);
     }
+
+    public function views()
+    {
+        return $this->hasMany(View::class);
+    }
+
 }

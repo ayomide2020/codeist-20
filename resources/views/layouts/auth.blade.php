@@ -7,7 +7,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Welcome to Codeist') }}</title>
+    <!-- <title>{{ config('app.name', 'Welcome to Codeist') }}</title> -->
+    <title>Codeist</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

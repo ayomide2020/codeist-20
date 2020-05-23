@@ -19,7 +19,7 @@
 
             <!-- Tag Content -->
             <form>
-              <div class="container-fluid p-0" v-if="tags.length > 0">
+              <div class="container-fluid p-0">
                 <validation-error :errors="validationErrors" v-if="validationErrors"></validation-error>
                 <div class="container-fluid row marginFive p-0">
                   <div class="container-fluid col-xl-10 col-lg-10 col-md-12 col-12 font-serif">
@@ -58,10 +58,6 @@
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-              </div>
-
-              <div v-else class="col-12">
-                  <p class="lead text-muted text-center mt-5 pt-5">You have no tags</p>
               </div>
             </form>
 

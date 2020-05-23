@@ -16,7 +16,7 @@
           
             <li class="list-group-item">
               <i class="fa fa-briefcase"></i>
-              <b>{{ job.title }}</b>
+              <a :href="'/job/' + job.id">{{ job.title }}</a>
               <br />
               <span>{{ job.company }}</span>
               <br />

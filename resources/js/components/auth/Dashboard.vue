@@ -6,7 +6,7 @@
         <div class="m-0 p-0 container-fluid">
           <div class="container-fluid row p-0 m-0">
             <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12">
-              <div class="container-fluid m-0 row justify-content-between">
+              <div class="container-fluid m-0 mb-4 row justify-content-between">
                 <div class>
                   <h3 class="mb-5">Top Questions</h3>
                 </div>
@@ -17,7 +17,7 @@
 
               <div class="container-fluid">
                 <div class="row m-0 justify-content-start">
-                  <div class="col-2">
+                  <!-- <div class="col-2">
                     <p>Active</p>
                   </div>
                   <div class="col-2">
@@ -28,7 +28,7 @@
                   </div>
                   <div class="col-2">
                     <p>Month</p>
-                  </div>
+                  </div> -->
                 </div>
               </div>
 
@@ -55,6 +55,7 @@
                     <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-xs-12">
                       <h5 class="question font-weight-bold">
                         <a :href="'/question/' + question.id">{{ question.title }}</a>
+                        
                       </h5>
                       <div class="row p-0 justify-content-between align-items-start">
                         <div class="col-xl-12 py-1 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12">

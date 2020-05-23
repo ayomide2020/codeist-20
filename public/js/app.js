@@ -2593,7 +2593,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
-    source: String
+    source: String,
+    question: {
+      type: Object
+    }
   },
   components: {
     editor: _tinymce_tinymce_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
@@ -2687,6 +2690,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ArticleCard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ArticleCard */ "./resources/js/components/auth/ArticleCard.vue");
 /* harmony import */ var _JobCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./JobCard */ "./resources/js/components/auth/JobCard.vue");
 /* harmony import */ var _NavbarComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavbarComponent */ "./resources/js/components/auth/NavbarComponent.vue");
+//
 //
 //
 //
@@ -3013,6 +3017,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -3042,6 +3054,7 @@ __webpack_require__.r(__webpack_exports__);
       description: "",
       amount_from: "",
       amount_to: "",
+      currency: "",
       tags: [],
       user: {},
       options: [],
@@ -3088,7 +3101,8 @@ __webpack_require__.r(__webpack_exports__);
         location: this.location,
         description: this.description,
         amount_from: this.amount_from,
-        amount_to: this.amount_to
+        amount_to: this.amount_to,
+        currency: this.currency
       };
       axios.post("/jobs", data).then(function (res) {
         console.log(res.data);
@@ -3100,6 +3114,7 @@ __webpack_require__.r(__webpack_exports__);
         _this3.tags = [];
         _this3.amount_from = "";
         _this3.amount_to = "";
+        _this3.currency = "";
       })["catch"](function (error) {
         if (error.response.status == 422) {
           console.log(error.response.data.errors);
@@ -3275,28 +3290,30 @@ __webpack_require__.r(__webpack_exports__);
       items: [{
         icon: "mdi-contacts",
         text: "Home",
-        href: "/home"
+        href: "/home",
+        target: "_self"
       }, {
         icon: "mdi-message-text",
-        text: "Question",
-        href: "/question"
+        text: "Ask Question",
+        href: "/question",
+        target: "_self"
       }, {
         icon: "mdi-content-copy",
-        text: "Tags",
-        href: "/tag"
-      }, {
-        icon: "mdi-contact-mail",
-        text: "Article World",
-        href: "/canvas"
+        text: "Manage Tags",
+        href: "/tag",
+        target: "_self"
       }, {
         icon: "mdi-history",
         text: "Job",
-        href: "/job"
+        href: "/job",
+        target: "_self"
       }, {
-        icon: "mdi-settings",
-        text: "Settings",
-        href: "/settings"
-      }]
+        icon: "mdi-contact-mail",
+        text: "Article World",
+        href: "/canvas",
+        target: "_blank"
+      } // { icon: "mdi-settings", text: "Settings", href: "/settings", target: "_self" }
+      ]
     };
   },
   methods: {
@@ -3313,6 +3330,145 @@ __webpack_require__.r(__webpack_exports__);
         }
       })["catch"](function (err) {
         console.log(err);
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/auth/SingleJob.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/auth/SingleJob.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _JobCard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./JobCard */ "./resources/js/components/auth/JobCard.vue");
+/* harmony import */ var _NavbarComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavbarComponent */ "./resources/js/components/auth/NavbarComponent.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    job: {
+      type: Object
+    }
+  },
+  components: {
+    JobCard: _JobCard__WEBPACK_IMPORTED_MODULE_0__["default"],
+    NavbarComponent: _NavbarComponent__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  mounted: function mounted() {},
+  data: function data() {
+    return {
+      url: window.location.href,
+      jobs: []
+    };
+  },
+  methods: {
+    doCopy: function doCopy() {
+      this.$copyText(this.url).then(function (e) {
+        alert('Copied');
+        console.log(e);
+      }, function (e) {
+        alert('Can not copy');
+        console.log(e);
       });
     }
   }
@@ -3510,10 +3666,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _JobCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./JobCard */ "./resources/js/components/auth/JobCard.vue");
 /* harmony import */ var _non_auth_ValidationError__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../non-auth/ValidationError */ "./resources/js/components/non-auth/ValidationError.vue");
 /* harmony import */ var _NavbarComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./NavbarComponent */ "./resources/js/components/auth/NavbarComponent.vue");
-//
-//
-//
-//
 //
 //
 //
@@ -4317,9 +4469,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted test.');
+  },
+  data: function data() {
+    return {
+      url: window.location.href
+    };
   }
 });
 
@@ -4624,7 +4783,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -4672,6 +4830,7 @@ __webpack_require__.r(__webpack_exports__);
         console.log(error);
         _this.validationErrors = error.response.data.errors;
         _this.isloading = false;
+        _this.passError = "";
       });
     }
   }
@@ -9329,7 +9488,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".font-size[data-v-1428c101] {\n  font-size: 12px;\n}\n.bg-grey[data-v-1428c101]{\n  background-color: lightgray;\n  opacity: 1.0;\n}\r\n", ""]);
+exports.push([module.i, ".font-size[data-v-1428c101] {\n  font-size: 12px;\n}\r\n", ""]);
 
 // exports
 
@@ -9368,6 +9527,25 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 // module
 exports.push([module.i, ".link{\n  text-decoration: none !important;\n}\n.form-title{\n  font-size: 30px;\n  border:none !important;\n}\n.form-title:active{\n  font-size: 30px;\n  outline: 0;\n  box-shadow: none !important;\n  border:none !important;\n}\n.form-title:focus{\n  box-shadow: none !important;\n}\n.contain {\n  background: #fff;\n  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.5);\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/auth/SingleJob.vue?vue&type=style&index=0&id=d1c73ace&scoped=true&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/auth/SingleJob.vue?vue&type=style&index=0&id=d1c73ace&scoped=true&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".bg-grey[data-v-d1c73ace] {\n  background: rgba(225, 225, 225, 0.2);\n  border-radius: 5px;\n}\n.space-top-5[data-v-d1c73ace] {\n  margin-top: 5em;\n}\n.space-top-3[data-v-d1c73ace] {\n  margin-top: 3em;\n}\r\n", ""]);
 
 // exports
 
@@ -9462,7 +9640,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".d-card{\n  position: relative;\n  display: flex;\n  min-width: 0;\n  word-wrap: break-word;\n  background-color: #fff;\n  background-clip: border-box;\n  border: 1px solid rgba(0, 0, 0, 0.125);\n  border-radius: 0.25rem;\n}\n.codeist-mtb-10{\n  margin-top: 10%;\n  margin-bottom: 10%;\n  font-family: 'Courier';\n  font-size: 17px;\n}\n.d-card{\n  font-family: 'Arial';\n}\n.codeist-card{\n  background: #fff !important;\n  box-shadow: 1px 2px 8px rgba(0,0,0,0.5);\n}\n.display-grid{\n  position: relative;\n}\n.display-grid:after {\n  content: \"\";\n  position: absolute;\n  border-top: 5px solid #ffbe54;\n  left: 45%;\n  bottom: -20px;\n  width: 10%;\n  border-radius: 10px;\n  height: 0px;\n}\n.hero-text{\n  font-size: 20px;\n}\r\n\r\n", ""]);
+exports.push([module.i, ".d-card{\n  position: relative;\n  display: flex;\n  min-width: 0;\n  word-wrap: break-word;\n  background-color: #fff;\n  background-clip: border-box;\n  border: 1px solid rgba(0, 0, 0, 0.125);\n  border-radius: 0.25rem;\n}\n.codeist-mtb-10{\n  margin-top: 10%;\n  margin-bottom: 10%;\n  font-family: 'Courier';\n  font-size: 17px;\n}\n.d-card{\n  font-family: 'Arial';\n}\n.codeist-card{\n  background: #fff !important;\n  box-shadow: 1px 2px 8px rgba(0,0,0,0.5);\n}\n.display-grid{\n  position: relative;\n}\n.display-grid:after {\n  content: \"\";\n  position: absolute;\n  border-top: 5px solid #ffbe54;\n  left: 45%;\n  bottom: -20px;\n  width: 10%;\n  border-radius: 10px;\n  height: 0px;\n}\n.hero-text{\n  font-size: 20px;\n}\n.btn-codeist-orange{\n  background-color: #ffbe54;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -9557,7 +9735,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".active[data-v-7569cb91]{\n  background-color: #ffbe54 !important;\n  border-top-left-radius: 20px !important;\n  border-top-right-radius: 20px !important;\n  border-bottom-left-radius: 20px !important;\n  border-bottom-right-radius: 20px !important;\n  padding-left: 20px;\n  padding-right: 20px;\n}\n.bg-color[data-v-7569cb91]{\n  background: #6c63ff;\n}\r\n", ""]);
+exports.push([module.i, ".active[data-v-7569cb91]{\n  background-color: #ffbe54 !important;\n  border-top-left-radius: 20px !important;\n  border-top-right-radius: 20px !important;\n  border-bottom-left-radius: 20px !important;\n  border-bottom-right-radius: 20px !important;\n  padding-left: 20px;\n  padding-right: 20px;\n}\n.bg-color[data-v-7569cb91]{\n  background: #fff;\n}\r\n", ""]);
 
 // exports
 
@@ -40629,6 +40807,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/auth/SingleJob.vue?vue&type=style&index=0&id=d1c73ace&scoped=true&lang=css&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/auth/SingleJob.vue?vue&type=style&index=0&id=d1c73ace&scoped=true&lang=css& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--7-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./SingleJob.vue?vue&type=style&index=0&id=d1c73ace&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/auth/SingleJob.vue?vue&type=style&index=0&id=d1c73ace&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/auth/SingleQuestion.vue?vue&type=style&index=0&id=0d946b3a&scoped=true&lang=css&":
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/auth/SingleQuestion.vue?vue&type=style&index=0&id=0d946b3a&scoped=true&lang=css& ***!
@@ -42103,7 +42311,7 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "container-fluid m-0 row justify-content-between"
+                          "container-fluid m-0 mb-4 row justify-content-between"
                       },
                       [
                         _c("div", {}, [
@@ -42126,27 +42334,9 @@ var render = function() {
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "container-fluid" }, [
-                      _c(
-                        "div",
-                        { staticClass: "row m-0 justify-content-start" },
-                        [
-                          _c("div", { staticClass: "col-2" }, [
-                            _c("p", [_vm._v("Active")])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "col-2" }, [
-                            _c("p", [_vm._v("Hot")])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "col-2" }, [
-                            _c("p", [_vm._v("Week")])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "col-2" }, [
-                            _c("p", [_vm._v("Month")])
-                          ])
-                        ]
-                      )
+                      _c("div", {
+                        staticClass: "row m-0 justify-content-start"
+                      })
                     ]),
                     _vm._v(" "),
                     _vm.questions.length < 1
@@ -42455,342 +42645,295 @@ var render = function() {
                     })
                   : _vm._e(),
                 _vm._v(" "),
+                _c("h3", [
+                  _c(
+                    "p",
+                    { staticClass: "mb-0 ml-5 font-weight-bold text-dark" },
+                    [_vm._v("Post Job")]
+                  )
+                ]),
+                _vm._v(" "),
                 _c(
-                  "form",
-                  {
-                    staticClass: "container-fluid p-4",
-                    attrs: { action: "", method: "POST" }
-                  },
+                  "v-row",
+                  { attrs: { justify: "between" } },
                   [
-                    _c("div", { staticClass: "row" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "col-xl-9 col-lg-9 col-md-9 col-sm-9 col-12 bg-grey contain px-2 py-3 mt-5"
-                        },
-                        [
-                          _c("h2", [
-                            _c(
-                              "p",
-                              {
-                                staticClass:
-                                  "mb-0 ml-5 font-weight-bold text-dark"
-                              },
-                              [_vm._v("Post Job")]
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12 px-2 py-3 mb-5"
-                            },
-                            [
-                              _c("input", {
-                                directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.title,
-                                    expression: "title"
-                                  }
-                                ],
-                                staticClass: "form-control pr-0 p-4 mb-4 form",
-                                attrs: {
-                                  type: "text",
-                                  name: "title",
-                                  id: "title",
-                                  placeholder: "Title",
-                                  autocomplete: "off",
-                                  autofocus: ""
-                                },
-                                domProps: { value: _vm.title },
-                                on: {
-                                  input: function($event) {
-                                    if ($event.target.composing) {
-                                      return
-                                    }
-                                    _vm.title = $event.target.value
-                                  }
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c("input", {
-                                directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.company,
-                                    expression: "company"
-                                  }
-                                ],
-                                staticClass: "form-control pr-0 p-4 mb-4 form",
-                                attrs: {
-                                  type: "text",
-                                  name: "Company",
-                                  id: "company",
-                                  placeholder: "Company",
-                                  autocomplete: "off",
-                                  autofocus: ""
-                                },
-                                domProps: { value: _vm.company },
-                                on: {
-                                  input: function($event) {
-                                    if ($event.target.composing) {
-                                      return
-                                    }
-                                    _vm.company = $event.target.value
-                                  }
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c("input", {
-                                directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.location,
-                                    expression: "location"
-                                  }
-                                ],
-                                staticClass: "form-control pr-0 p-4 mb-4 form",
-                                attrs: {
-                                  type: "text",
-                                  name: "location",
-                                  id: "location",
-                                  placeholder: "Location",
-                                  autocomplete: "off",
-                                  autofocus: ""
-                                },
-                                domProps: { value: _vm.location },
-                                on: {
-                                  input: function($event) {
-                                    if ($event.target.composing) {
-                                      return
-                                    }
-                                    _vm.location = $event.target.value
-                                  }
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c("div", [
-                                _c("label", { attrs: { for: "amount" } }, [
-                                  _vm._v("Amount")
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "row" }, [
-                                  _c("div", { staticClass: "col" }, [
-                                    _c("input", {
-                                      directives: [
-                                        {
-                                          name: "model",
-                                          rawName: "v-model",
-                                          value: _vm.amount_from,
-                                          expression: "amount_from"
-                                        }
-                                      ],
-                                      staticClass:
-                                        "form-control pr-0 p-4 mb-4 form",
-                                      attrs: {
-                                        type: "number",
-                                        name: "amount_from",
-                                        id: "amount_from",
-                                        placeholder: "amount from",
-                                        autocomplete: "off",
-                                        autofocus: ""
+                    _c(
+                      "v-col",
+                      { attrs: { cols: "12", sm: "10", md: "8", lg: "8" } },
+                      [
+                        _c(
+                          "v-card",
+                          { ref: "form", attrs: { method: "POST" } },
+                          [
+                            _c("v-card-text", [
+                              _c(
+                                "form",
+                                [
+                                  _c("v-text-field", {
+                                    ref: "title",
+                                    attrs: {
+                                      type: "text",
+                                      id: "title",
+                                      label: "Title",
+                                      placeholder: "Title",
+                                      outlined: "",
+                                      required: ""
+                                    },
+                                    model: {
+                                      value: _vm.title,
+                                      callback: function($$v) {
+                                        _vm.title = $$v
                                       },
-                                      domProps: { value: _vm.amount_from },
-                                      on: {
-                                        input: function($event) {
-                                          if ($event.target.composing) {
-                                            return
-                                          }
-                                          _vm.amount_from = $event.target.value
-                                        }
-                                      }
-                                    })
+                                      expression: "title"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("v-text-field", {
+                                    ref: "company",
+                                    attrs: {
+                                      type: "text",
+                                      id: "company",
+                                      label: "Company",
+                                      placeholder: "company",
+                                      outlined: "",
+                                      required: ""
+                                    },
+                                    model: {
+                                      value: _vm.company,
+                                      callback: function($$v) {
+                                        _vm.company = $$v
+                                      },
+                                      expression: "company"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("v-text-field", {
+                                    ref: "location",
+                                    attrs: {
+                                      type: "text",
+                                      id: "location",
+                                      label: "Location",
+                                      placeholder: "location",
+                                      outlined: "",
+                                      required: ""
+                                    },
+                                    model: {
+                                      value: _vm.location,
+                                      callback: function($$v) {
+                                        _vm.location = $$v
+                                      },
+                                      expression: "location"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("label", { attrs: { for: "salary" } }, [
+                                    _vm._v("Salary")
                                   ]),
                                   _vm._v(" "),
-                                  _c("div", { staticClass: "col" }, [
-                                    _c("input", {
-                                      directives: [
-                                        {
-                                          name: "model",
-                                          rawName: "v-model",
-                                          value: _vm.amount_to,
-                                          expression: "amount_to"
+                                  _c(
+                                    "v-row",
+                                    [
+                                      _c(
+                                        "v-col",
+                                        [
+                                          _c("v-text-field", {
+                                            attrs: {
+                                              label: "From",
+                                              type: "number",
+                                              name: "amount_from",
+                                              outlined: "",
+                                              prefix: "$"
+                                            },
+                                            model: {
+                                              value: _vm.amount_from,
+                                              callback: function($$v) {
+                                                _vm.amount_from = $$v
+                                              },
+                                              expression: "amount_from"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-col",
+                                        [
+                                          _c("v-text-field", {
+                                            attrs: {
+                                              label: "To",
+                                              type: "number",
+                                              name: "amount_to",
+                                              outlined: "",
+                                              prefix: "$"
+                                            },
+                                            model: {
+                                              value: _vm.amount_to,
+                                              callback: function($$v) {
+                                                _vm.amount_to = $$v
+                                              },
+                                              expression: "amount_to"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "mt-5" },
+                                    [
+                                      _c("multiselect", {
+                                        attrs: {
+                                          "tag-placeholder":
+                                            "Add this as new tag",
+                                          placeholder: "Search or Add a tag",
+                                          label: "name",
+                                          options: _vm.options,
+                                          "track-by": "name",
+                                          multiple: true,
+                                          taggable: true
+                                        },
+                                        on: { tag: _vm.addTag },
+                                        model: {
+                                          value: _vm.tags,
+                                          callback: function($$v) {
+                                            _vm.tags = $$v
+                                          },
+                                          expression: "tags"
                                         }
-                                      ],
-                                      staticClass:
-                                        "form-control pr-0 p-4 mb-4 form",
-                                      attrs: {
-                                        type: "number",
-                                        name: "amount_to",
-                                        id: "amount_to",
-                                        placeholder: "amount to",
-                                        autocomplete: "off",
-                                        autofocus: ""
-                                      },
-                                      domProps: { value: _vm.amount_to },
-                                      on: {
-                                        input: function($event) {
-                                          if ($event.target.composing) {
-                                            return
-                                          }
-                                          _vm.amount_to = $event.target.value
-                                        }
-                                      }
-                                    })
-                                  ])
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "mt-5" },
-                                [
-                                  _c("multiselect", {
+                                      })
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("h4", { staticClass: "text-dark my-5" }, [
+                                    _vm._v("Job Description")
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("editor", {
                                     attrs: {
-                                      "tag-placeholder": "Add this as new tag",
-                                      placeholder: "Search or Add a tag",
-                                      label: "name",
-                                      options: _vm.options,
-                                      "track-by": "name",
-                                      multiple: true,
-                                      taggable: true
+                                      "api-key":
+                                        "s0a0a2vky79uza8yzxwbe4khvedd7mdehfrp4e1b4rxoplw4",
+                                      init: {
+                                        height: 400,
+                                        menubar: true,
+                                        plugins: [
+                                          "advlist codesample autolink lists link image charmap print preview anchor",
+                                          "searchreplace visualblocks code fullscreen",
+                                          "insertdatetime media table paste code help wordcount"
+                                        ],
+                                        codesample_global_prismjs: true,
+                                        codesample_languages: [
+                                          { text: "HTML/XML", value: "markup" },
+                                          {
+                                            text: "JavaScript",
+                                            value: "javascript"
+                                          },
+                                          { text: "CSS", value: "css" },
+                                          { text: "PHP", value: "php" },
+                                          { text: "Ruby", value: "ruby" },
+                                          { text: "Python", value: "python" },
+                                          { text: "Java", value: "java" },
+                                          { text: "C", value: "c" },
+                                          { text: "C#", value: "csharp" },
+                                          { text: "C++", value: "cpp" }
+                                        ],
+                                        toolbar:
+                                          "undo redo | codesample | formatselect | bold italic backcolor | \
+                        alignleft aligncenter alignright alignjustify | \
+                        bullist numlist outdent indent | removeformat | help"
+                                      }
                                     },
-                                    on: { tag: _vm.addTag },
                                     model: {
-                                      value: _vm.tags,
+                                      value: _vm.description,
                                       callback: function($$v) {
-                                        _vm.tags = $$v
+                                        _vm.description = $$v
                                       },
-                                      expression: "tags"
+                                      expression: "description"
                                     }
                                   })
                                 ],
                                 1
                               )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("h4", { staticClass: "text-dark ml-5 mb-4" }, [
-                            _vm._v("Job Description")
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12 px-2 py-3 mb-5"
-                            },
-                            [
-                              _c("editor", {
-                                attrs: {
-                                  "api-key":
-                                    "s0a0a2vky79uza8yzxwbe4khvedd7mdehfrp4e1b4rxoplw4",
-                                  init: {
-                                    height: 400,
-                                    menubar: true,
-                                    plugins: [
-                                      "advlist codesample autolink lists link image charmap print preview anchor",
-                                      "searchreplace visualblocks code fullscreen",
-                                      "insertdatetime media table paste code help wordcount"
-                                    ],
-                                    codesample_global_prismjs: true,
-                                    codesample_languages: [
-                                      { text: "HTML/XML", value: "markup" },
-                                      {
-                                        text: "JavaScript",
-                                        value: "javascript"
-                                      },
-                                      { text: "CSS", value: "css" },
-                                      { text: "PHP", value: "php" },
-                                      { text: "Ruby", value: "ruby" },
-                                      { text: "Python", value: "python" },
-                                      { text: "Java", value: "java" },
-                                      { text: "C", value: "c" },
-                                      { text: "C#", value: "csharp" },
-                                      { text: "C++", value: "cpp" }
-                                    ],
-                                    toolbar:
-                                      "undo redo | codesample | formatselect | bold italic backcolor | \
-                        alignleft aligncenter alignright alignjustify | \
-                        bullist numlist outdent indent | removeformat | help"
-                                  }
-                                },
-                                model: {
-                                  value: _vm.description,
-                                  callback: function($$v) {
-                                    _vm.description = $$v
+                            ]),
+                            _vm._v(" "),
+                            _c("v-divider", { staticClass: "mt-12" }),
+                            _vm._v(" "),
+                            _c(
+                              "v-card-actions",
+                              [
+                                _c("v-btn", { attrs: { text: "" } }, [
+                                  _vm._v("Cancel")
+                                ]),
+                                _vm._v(" "),
+                                _c("v-spacer"),
+                                _vm._v(" "),
+                                _c(
+                                  "v-btn",
+                                  {
+                                    attrs: { color: "primary", text: "" },
+                                    on: { click: _vm.postJob }
                                   },
-                                  expression: "description"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass: "btn btn-outline-primary mt-5",
-                              on: { click: _vm.postJob }
-                            },
-                            [_vm._v("Post Job")]
-                          ),
-                          _vm._v(" "),
-                          _vm.success
-                            ? _c(
-                                "div",
-                                {
-                                  staticClass:
-                                    "alert alert-success alert-dismissible fade mt-5 show",
-                                  attrs: { role: "alert" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\r\n                  " +
-                                      _vm._s(_vm.success) +
-                                      "\r\n                  "
-                                  ),
-                                  _c(
-                                    "button",
-                                    {
-                                      staticClass: "close",
-                                      attrs: {
-                                        type: "button",
-                                        "data-dismiss": "alert",
-                                        "aria-label": "Close"
-                                      }
-                                    },
-                                    [
-                                      _c(
-                                        "span",
-                                        { attrs: { "aria-hidden": "true" } },
-                                        [_vm._v("×")]
-                                      )
-                                    ]
-                                  )
-                                ]
-                              )
-                            : _vm._e()
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 d-none d-xl-block d-lg-block d-md-block"
-                        },
-                        [_c("job-card", { staticClass: "mt-2" })],
-                        1
-                      )
-                    ])
-                  ]
+                                  [_vm._v("Post Job")]
+                                )
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _vm.success
+                          ? _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "alert alert-success alert-dismissible fade mt-5 show",
+                                attrs: { role: "alert" }
+                              },
+                              [
+                                _vm._v(
+                                  "\r\n                  " +
+                                    _vm._s(_vm.success) +
+                                    "\r\n                  "
+                                ),
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "close",
+                                    attrs: {
+                                      type: "button",
+                                      "data-dismiss": "alert",
+                                      "aria-label": "Close"
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "span",
+                                      { attrs: { "aria-hidden": "true" } },
+                                      [_vm._v("×")]
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          : _vm._e()
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "v-col",
+                      { attrs: { cols: "12", sm: "10", md: "4", lg: "3" } },
+                      [_c("job-card", { staticClass: "mt-2" })],
+                      1
+                    )
+                  ],
+                  1
                 )
               ],
               1
@@ -42853,7 +42996,9 @@ var render = function() {
                   [
                     _c("i", { staticClass: "fa fa-briefcase" }),
                     _vm._v(" "),
-                    _c("b", [_vm._v(_vm._s(job.title))]),
+                    _c("a", { attrs: { href: "/job/" + job.id } }, [
+                      _vm._v(_vm._s(job.title))
+                    ]),
                     _vm._v(" "),
                     _c("br"),
                     _vm._v(" "),
@@ -42975,7 +43120,7 @@ var render = function() {
                     {
                       key: item.text,
                       staticClass: "link",
-                      attrs: { href: item.href, link: "" }
+                      attrs: { href: item.href, target: item.target, link: "" }
                     },
                     [
                       _c(
@@ -43096,17 +43241,268 @@ var render = function() {
           _vm._v(" "),
           _c(
             "v-btn",
-            { attrs: { icon: "" } },
+            { attrs: { icon: "", href: "/" } },
             [_c("v-icon", [_vm._v("mdi-apps")])],
             1
-          ),
-          _vm._v(" "),
-          _c(
-            "v-btn",
-            { attrs: { icon: "" } },
-            [_c("v-icon", [_vm._v("mdi-bell")])],
-            1
           )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/auth/SingleJob.vue?vue&type=template&id=d1c73ace&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/auth/SingleJob.vue?vue&type=template&id=d1c73ace&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "v-app",
+        { attrs: { id: "inspire" } },
+        [
+          _c("navbar-component"),
+          _vm._v(" "),
+          _c("v-content", [
+            _c("div", { staticClass: "m-0 p-0 container-fluid" }, [
+              _c("div", { staticClass: "container-fluid row p-0 m-0" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "container-fluid border-bottom pb-5 m-0 row justify-content-between align-items-start"
+                  },
+                  [
+                    _c("div", { staticClass: "m-0 p-0 col-10" }, [
+                      _c("h4", { staticClass: "mb-5 ml-3 font-weight-bold" }, [
+                        _vm._v(_vm._s(_vm.job.title))
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "mb-5 ml-3 font-weight-bold" }, [
+                        _vm._v(_vm._s(_vm.job.company))
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "ml-3" }, [
+                        _c("i", { staticClass: "fa fa-clock" }),
+                        _vm._v(
+                          "\r\n                Posted:\r\n                "
+                        ),
+                        _c("b", [_vm._v(_vm._s(_vm.job.date))])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "m-0 p-0 col-2" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-outline-primary",
+                          attrs: { href: "/job" }
+                        },
+                        [_vm._v("Post Job")]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "mt-5 col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12"
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "container-fluid row m-0 bg-grey px-3 py-5"
+                          },
+                          [
+                            _c(
+                              "div",
+                              { staticClass: "col-12" },
+                              [
+                                _vm._v("\r\n                  Technologies:"),
+                                _c("br"),
+                                _vm._v(" "),
+                                _c("span", {
+                                  domProps: { innerHTML: _vm._s(_vm.job.tag) }
+                                }),
+                                _vm._v(" "),
+                                _vm._l(_vm.job.tag_ids, function(tag) {
+                                  return _c(
+                                    "a",
+                                    {
+                                      key: tag.id,
+                                      staticClass:
+                                        "mt-5 mr-2 badge badge-info text-white py-2 px-4",
+                                      attrs: { href: "#" }
+                                    },
+                                    [_vm._v(_vm._s(tag.name))]
+                                  )
+                                }),
+                                _vm._v(" "),
+                                _c("hr", { staticClass: "space-top-3" })
+                              ],
+                              2
+                            ),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-12" }, [
+                              _c("div", [
+                                _vm._v(
+                                  "\r\n                  Job description:"
+                                ),
+                                _c("br"),
+                                _c("br"),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    domProps: {
+                                      innerHTML: _vm._s(_vm.job.description)
+                                    }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\r\n                  " +
+                                        _vm._s(_vm.job.description)
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c("hr", { staticClass: "space-top-3" })
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-12" }, [
+                              _vm._v("\r\n                  Salary:"),
+                              _c("br"),
+                              _c("br"),
+                              _vm._v(" "),
+                              _c("span", [
+                                _vm._v(
+                                  _vm._s(_vm.job.amount_from) +
+                                    " - " +
+                                    _vm._s(_vm.job.amount_to)
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("hr", { staticClass: "space-top-3" })
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "space-top-5" }, [
+                          _vm.job.length == 0
+                            ? _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "container-fluid bg-grey px-3 py-5"
+                                },
+                                [
+                                  _c("div", { staticClass: "mt-5" }, [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "alert alert-warning alert-dismissible fade show",
+                                        attrs: { role: "alert" }
+                                      },
+                                      [
+                                        _c(
+                                          "button",
+                                          {
+                                            staticClass: "close",
+                                            attrs: {
+                                              type: "button",
+                                              "data-dismiss": "alert",
+                                              "aria-label": "Close"
+                                            }
+                                          },
+                                          [
+                                            _c(
+                                              "span",
+                                              {
+                                                attrs: { "aria-hidden": "true" }
+                                              },
+                                              [_vm._v("×")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "span",
+                                              { staticClass: "sr-only" },
+                                              [_vm._v("Close")]
+                                            )
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c("strong", [_vm._v("Oops!")]),
+                                        _vm._v(
+                                          " No Job Post yet. Be the first to do so.\r\n                  "
+                                        )
+                                      ]
+                                    )
+                                  ])
+                                ]
+                              )
+                            : _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "container-fluid bg-grey px-3 py-5"
+                                },
+                                _vm._l(_vm.jobs, function(job) {
+                                  return _c(
+                                    "div",
+                                    { key: job.id, staticClass: "space-top-3" },
+                                    [
+                                      _c("span", {
+                                        domProps: { innerHTML: _vm._s(job.job) }
+                                      }),
+                                      _vm._v(" "),
+                                      _c("hr", { staticClass: "space-top-3" })
+                                    ]
+                                  )
+                                }),
+                                0
+                              )
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "mt-5 p-0 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 d-none d-xl-block d-lg-block d-md-block"
+                      },
+                      [_c("job-card", { staticClass: "mt-5" })],
+                      1
+                    )
+                  ]
+                )
+              ])
+            ])
+          ])
         ],
         1
       )
@@ -43345,7 +43741,9 @@ var render = function() {
                             {
                               staticClass: "btn btn-outline-dark",
                               attrs: {
-                                href: "https://twitter.com/share?url=" + _vm.url
+                                href:
+                                  "https://twitter.com/share?url=" + _vm.url,
+                                target: "_blank"
                               }
                             },
                             [_vm._v("Twitter")]
@@ -43360,7 +43758,8 @@ var render = function() {
                               attrs: {
                                 href:
                                   "https://www.facebook.com/sharer/sharer.php?u=#" +
-                                  _vm.url
+                                  _vm.url,
+                                target: "_blank"
                               }
                             },
                             [_vm._v("Facebook")]
@@ -43372,7 +43771,7 @@ var render = function() {
                             "a",
                             {
                               staticClass: "btn btn-outline-dark",
-                              attrs: { href: "#" },
+                              attrs: { href: "#", target: "_blank" },
                               on: { click: _vm.doCopy }
                             },
                             [_vm._v("Copy link")]
@@ -43488,152 +43887,135 @@ var render = function() {
                     ),
                     _vm._v(" "),
                     _c("form", [
-                      _vm.tags.length > 0
-                        ? _c(
+                      _c(
+                        "div",
+                        { staticClass: "container-fluid p-0" },
+                        [
+                          _vm.validationErrors
+                            ? _c("validation-error", {
+                                attrs: { errors: _vm.validationErrors }
+                              })
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _c(
                             "div",
-                            { staticClass: "container-fluid p-0" },
+                            {
+                              staticClass: "container-fluid row marginFive p-0"
+                            },
                             [
-                              _vm.validationErrors
-                                ? _c("validation-error", {
-                                    attrs: { errors: _vm.validationErrors }
-                                  })
-                                : _vm._e(),
-                              _vm._v(" "),
                               _c(
                                 "div",
                                 {
                                   staticClass:
-                                    "container-fluid row marginFive p-0"
+                                    "container-fluid col-xl-10 col-lg-10 col-md-12 col-12 font-serif"
                                 },
                                 [
                                   _c(
                                     "div",
                                     {
                                       staticClass:
-                                        "container-fluid col-xl-10 col-lg-10 col-md-12 col-12 font-serif"
+                                        "container-fluid m-0 row p-0 justify-content-between"
                                     },
                                     [
                                       _c(
                                         "div",
-                                        {
-                                          staticClass:
-                                            "container-fluid m-0 row p-0 justify-content-between"
-                                        },
+                                        { staticClass: "col-10 p-0 m-0" },
+                                        [
+                                          _c("input", {
+                                            directives: [
+                                              {
+                                                name: "model",
+                                                rawName: "v-model",
+                                                value: _vm.name,
+                                                expression: "name"
+                                              }
+                                            ],
+                                            staticClass:
+                                              "form-control pr-0 p-4 form-tag",
+                                            attrs: {
+                                              type: "text",
+                                              name: "tag",
+                                              id: "tag",
+                                              items: _vm.tags,
+                                              placeholder: "Add a tag",
+                                              autocomplete: "off"
+                                            },
+                                            domProps: { value: _vm.name },
+                                            on: {
+                                              focus: function($event) {
+                                                _vm.success = ""
+                                              },
+                                              input: function($event) {
+                                                if ($event.target.composing) {
+                                                  return
+                                                }
+                                                _vm.name = $event.target.value
+                                              }
+                                            }
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "col-2 p-0 m-0" },
                                         [
                                           _c(
-                                            "div",
-                                            { staticClass: "col-10 p-0 m-0" },
-                                            [
-                                              _c("input", {
-                                                directives: [
-                                                  {
-                                                    name: "model",
-                                                    rawName: "v-model",
-                                                    value: _vm.name,
-                                                    expression: "name"
-                                                  }
-                                                ],
-                                                staticClass:
-                                                  "form-control pr-0 p-4 form-tag",
-                                                attrs: {
-                                                  type: "text",
-                                                  name: "tag",
-                                                  id: "tag",
-                                                  items: _vm.tags,
-                                                  placeholder: "Add a tag",
-                                                  autocomplete: "off"
-                                                },
-                                                domProps: { value: _vm.name },
-                                                on: {
-                                                  focus: function($event) {
-                                                    _vm.success = ""
-                                                  },
-                                                  input: function($event) {
-                                                    if (
-                                                      $event.target.composing
-                                                    ) {
-                                                      return
-                                                    }
-                                                    _vm.name =
-                                                      $event.target.value
-                                                  }
-                                                }
-                                              })
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            { staticClass: "col-2 p-0 m-0" },
-                                            [
-                                              _c(
-                                                "a",
-                                                {
-                                                  staticClass:
-                                                    "btn btn-outline-primary px-5 py-3",
-                                                  on: { click: _vm.postTag }
-                                                },
-                                                [_vm._v("Add Tag")]
-                                              )
-                                            ]
+                                            "a",
+                                            {
+                                              staticClass:
+                                                "btn btn-outline-primary px-5 py-3",
+                                              on: { click: _vm.postTag }
+                                            },
+                                            [_vm._v("Add Tag")]
                                           )
                                         ]
                                       )
                                     ]
                                   )
                                 ]
-                              ),
-                              _vm._v(" "),
-                              _vm.success
-                                ? _c(
-                                    "div",
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _vm.success
+                            ? _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "alert alert-success alert-dismissible fade mt-5 show",
+                                  attrs: { role: "alert" }
+                                },
+                                [
+                                  _vm._v(
+                                    "\r\n                  " +
+                                      _vm._s(_vm.success) +
+                                      "\r\n                  "
+                                  ),
+                                  _c(
+                                    "button",
                                     {
-                                      staticClass:
-                                        "alert alert-success alert-dismissible fade mt-5 show",
-                                      attrs: { role: "alert" }
+                                      staticClass: "close",
+                                      attrs: {
+                                        type: "button",
+                                        "data-dismiss": "alert",
+                                        "aria-label": "Close"
+                                      }
                                     },
                                     [
-                                      _vm._v(
-                                        "\r\n                  " +
-                                          _vm._s(_vm.success) +
-                                          "\r\n                  "
-                                      ),
                                       _c(
-                                        "button",
-                                        {
-                                          staticClass: "close",
-                                          attrs: {
-                                            type: "button",
-                                            "data-dismiss": "alert",
-                                            "aria-label": "Close"
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "span",
-                                            {
-                                              attrs: { "aria-hidden": "true" }
-                                            },
-                                            [_vm._v("×")]
-                                          )
-                                        ]
+                                        "span",
+                                        { attrs: { "aria-hidden": "true" } },
+                                        [_vm._v("×")]
                                       )
                                     ]
                                   )
-                                : _vm._e()
-                            ],
-                            1
-                          )
-                        : _c("div", { staticClass: "col-12" }, [
-                            _c(
-                              "p",
-                              {
-                                staticClass:
-                                  "lead text-muted text-center mt-5 pt-5"
-                              },
-                              [_vm._v("You have no tags")]
-                            )
-                          ])
+                                ]
+                              )
+                            : _vm._e()
+                        ],
+                        1
+                      )
                     ]),
                     _vm._v(" "),
                     _c(
@@ -44148,7 +44530,7 @@ var staticRenderFns = [
         _c("h3", [
           _c("p", { staticClass: "mt-5 hero-text font-serif" }, [
             _vm._v(
-              "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ab magnam labore quibusdam facilis culpa temporibus. In ratione, nostrum harum labore excepturi corporis provident rem vel. Corrupti veniam dolore voluptate?"
+              "Codeist is an open community for anyone that codes. We help you get answers to your toughest coding questions, share knowledge with your coworkers in private, and find your next dream job.\n    "
             )
           ])
         ]),
@@ -44201,12 +44583,12 @@ var staticRenderFns = [
                       [
                         _c("div", { staticClass: "card-body" }, [
                           _c("h2", { staticClass: "card-title mt-3" }, [
-                            _vm._v("Heading here")
+                            _vm._v("Public Q&A")
                           ]),
                           _vm._v(" "),
                           _c("p", { staticClass: "card-text mt-3" }, [
                             _vm._v(
-                              "\n                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quae impedit numquam aspernatur voluptatem excepturi enim non eveniet.\n                        "
+                              "\n                            Get answers to more questions and give back by sharing your knowledge with others. Sign up for an account.    \n                        "
                             )
                           ]),
                           _vm._v(" "),
@@ -44214,9 +44596,9 @@ var staticRenderFns = [
                             "a",
                             {
                               staticClass: "btn btn-codeist-porpu mb-4",
-                              attrs: { href: "#" }
+                              attrs: { href: "/home" }
                             },
-                            [_vm._v("Button")]
+                            [_vm._v("Browse questions")]
                           )
                         ])
                       ]
@@ -44267,22 +44649,22 @@ var staticRenderFns = [
                       [
                         _c("div", { staticClass: "card-body" }, [
                           _c("h2", { staticClass: "card-title mt-3" }, [
-                            _vm._v("Heading here")
+                            _vm._v("Browse jobs")
                           ]),
                           _vm._v(" "),
                           _c("p", { staticClass: "card-text mt-3" }, [
                             _vm._v(
-                              "\n                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quae impedit numquam aspernatur voluptatem excepturi enim non eveniet.\n                        "
+                              "\n                          Find the right job through high quality listings and search for roles based on title, technology stack, salary, location, and more.  \n                        "
                             )
                           ]),
                           _vm._v(" "),
                           _c(
                             "a",
                             {
-                              staticClass: "btn btn-codeist-porpu mb-4",
-                              attrs: { href: "#" }
+                              staticClass: "btn btn-codeist-orange mb-4",
+                              attrs: { href: "/job" }
                             },
-                            [_vm._v("Button")]
+                            [_vm._v("Find a job")]
                           )
                         ])
                       ]
@@ -44333,12 +44715,12 @@ var staticRenderFns = [
                       [
                         _c("div", { staticClass: "card-body" }, [
                           _c("h2", { staticClass: "card-title mt-3" }, [
-                            _vm._v("Heading here")
+                            _vm._v("Public Q&A")
                           ]),
                           _vm._v(" "),
                           _c("p", { staticClass: "card-text mt-3" }, [
                             _vm._v(
-                              "\n                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quae impedit numquam aspernatur voluptatem excepturi enim non eveniet.\n                        "
+                              "\n                            Level up with Codeist while you work. Share knowledge privately with your coworkers using our Q&A engine.\n                        "
                             )
                           ]),
                           _vm._v(" "),
@@ -44346,9 +44728,9 @@ var staticRenderFns = [
                             "a",
                             {
                               staticClass: "btn btn-codeist-porpu mb-4",
-                              attrs: { href: "#" }
+                              attrs: { href: "/home" }
                             },
-                            [_vm._v("Button")]
+                            [_vm._v("Try for free")]
                           )
                         ])
                       ]
@@ -44463,7 +44845,7 @@ var staticRenderFns = [
               "a",
               {
                 staticClass: "btn btn-codeist-porpu mb-3 ml-3",
-                attrs: { href: "#" }
+                attrs: { href: "/job" }
               },
               [_vm._v("View all jobs")]
             )
@@ -44813,7 +45195,7 @@ var staticRenderFns = [
                     _c("div", { staticClass: "footer-text" }, [
                       _c("p", [
                         _vm._v(
-                          "Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing\n                            elit,Lorem ipsum dolor sit amet."
+                          "Get your coding questions answered to learn, build, and level up whether you’re beginning with JavaScript or a React professional. "
                         )
                       ])
                     ]),
@@ -44821,21 +45203,40 @@ var staticRenderFns = [
                     _c("div", { staticClass: "footer-social-icon" }, [
                       _c("span", [_vm._v("Follow us")]),
                       _vm._v(" "),
-                      _c("a", { attrs: { href: "#" } }, [
-                        _c("i", {
-                          staticClass: "fab fa-facebook-f facebook-bg"
-                        })
-                      ]),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-outline-primary",
+                          attrs: { href: "#", target: "_blank" }
+                        },
+                        [
+                          _c("i", {
+                            staticClass: "fab fa-facebook-f facebook-bg"
+                          })
+                        ]
+                      ),
                       _vm._v(" "),
-                      _c("a", { attrs: { href: "#" } }, [
-                        _c("i", { staticClass: "fab fa-twitter twitter-bg" })
-                      ]),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-outline-info",
+                          attrs: { href: "#", target: "_blank" }
+                        },
+                        [_c("i", { staticClass: "fab fa-twitter twitter-bg" })]
+                      ),
                       _vm._v(" "),
-                      _c("a", { attrs: { href: "#" } }, [
-                        _c("i", {
-                          staticClass: "fab fa-google-plus-g google-bg"
-                        })
-                      ])
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-outline-info",
+                          attrs: { href: "#", target: "_blank" }
+                        },
+                        [
+                          _c("i", {
+                            staticClass: "fab fa-google-plus-g google-bg"
+                          })
+                        ]
+                      )
                     ])
                   ])
                 ]),
@@ -44848,31 +45249,27 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("ul", [
                       _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [_vm._v("Home")])
+                        _c("a", { attrs: { href: "/" } }, [_vm._v("Home")])
                       ]),
                       _vm._v(" "),
                       _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [_vm._v("Profile")])
+                        _c("a", { attrs: { href: "/canvas" } }, [
+                          _vm._v("Article World")
+                        ])
                       ]),
                       _vm._v(" "),
                       _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [_vm._v("Article")])
+                        _c("a", { attrs: { href: "/tag" } }, [_vm._v("Tags")])
                       ]),
                       _vm._v(" "),
                       _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [_vm._v("portfolio")])
+                        _c("a", { attrs: { href: "/question" } }, [
+                          _vm._v("Questions")
+                        ])
                       ]),
                       _vm._v(" "),
                       _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [_vm._v("Contact")])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [_vm._v("Questions")])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [_vm._v("Jobs")])
+                        _c("a", { attrs: { href: "/job" } }, [_vm._v("Jobs")])
                       ])
                     ])
                   ])
@@ -44920,7 +45317,7 @@ var staticRenderFns = [
                   _c("div", { staticClass: "copyright-text" }, [
                     _c("p", [
                       _vm._v("Copyright © 2020, All Right Reserved "),
-                      _c("a", { attrs: { href: "" } }, [_vm._v("Codeist")])
+                      _c("a", { attrs: { href: "/" } }, [_vm._v("Codeist")])
                     ])
                   ])
                 ]
@@ -44978,7 +45375,7 @@ var staticRenderFns = [
               { staticClass: "hero-text mt-xl-4 mt-lg-3 mt-md-3 mt-sm-3 mt-2" },
               [
                 _vm._v(
-                  "\n                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima possimus neque necessitatibus enim facilis aspernatur praesentium dolor voluptas libero fuga nihil, vel, esse incidunt a voluptatum nostrum eaque vitae maxime?\n            "
+                  "\n                We build products that empower developers and connect them to solutions that enable productivity, growth, and discovery.\n            "
                 )
               ]
             ),
@@ -45229,7 +45626,7 @@ var staticRenderFns = [
                     "https://res.cloudinary.com/oluwatobi/image/upload/v1588016930/codeist/LogoSample_ByTailorBrands_1_bhqryu.jpg",
                   width: "150",
                   height: "150",
-                  alt: ""
+                  alt: "Codeist"
                 }
               })
             ]
@@ -45262,10 +45659,7 @@ var staticRenderFns = [
                 _c("li", { staticClass: "nav-item active mr-5" }, [
                   _c(
                     "a",
-                    {
-                      staticClass: "nav-link text-white",
-                      attrs: { href: "/" }
-                    },
+                    { staticClass: "nav-link text-dark", attrs: { href: "/" } },
                     [
                       _vm._v("Home "),
                       _c("span", { staticClass: "sr-only" }, [
@@ -45279,7 +45673,7 @@ var staticRenderFns = [
                   _c(
                     "a",
                     {
-                      staticClass: "nav-link text-white",
+                      staticClass: "nav-link text-dark",
                       attrs: { href: "/login" }
                     },
                     [_vm._v("Sign In")]
@@ -45290,7 +45684,7 @@ var staticRenderFns = [
                   _c(
                     "a",
                     {
-                      staticClass: "nav-link text-white",
+                      staticClass: "nav-link text-dark",
                       attrs: { href: "/register" }
                     },
                     [_vm._v("Sign Up")]
@@ -99456,6 +99850,7 @@ Vue.component('validation-error', __webpack_require__(/*! ./components/non-auth/
 Vue.component('dashboard-component', __webpack_require__(/*! ./components/auth/Dashboard.vue */ "./resources/js/components/auth/Dashboard.vue")["default"]);
 Vue.component('ask_question-component', __webpack_require__(/*! ./components/auth/AskQuestion.vue */ "./resources/js/components/auth/AskQuestion.vue")["default"]);
 Vue.component('single_question-component', __webpack_require__(/*! ./components/auth/SingleQuestion.vue */ "./resources/js/components/auth/SingleQuestion.vue")["default"]);
+Vue.component('single_job-component', __webpack_require__(/*! ./components/auth/SingleJob.vue */ "./resources/js/components/auth/SingleJob.vue")["default"]);
 Vue.component('tag-component', __webpack_require__(/*! ./components/auth/Tag.vue */ "./resources/js/components/auth/Tag.vue")["default"]);
 Vue.component('job-component', __webpack_require__(/*! ./components/auth/Job.vue */ "./resources/js/components/auth/Job.vue")["default"]);
 Vue.component('tag-component', __webpack_require__(/*! ./components/auth/Tag.vue */ "./resources/js/components/auth/Tag.vue")["default"]);
@@ -99616,15 +100011,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!******************************************************!*\
   !*** ./resources/js/components/auth/AskQuestion.vue ***!
   \******************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _AskQuestion_vue_vue_type_template_id_310919c3_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AskQuestion.vue?vue&type=template&id=310919c3&scoped=true& */ "./resources/js/components/auth/AskQuestion.vue?vue&type=template&id=310919c3&scoped=true&");
 /* harmony import */ var _AskQuestion_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AskQuestion.vue?vue&type=script&lang=js& */ "./resources/js/components/auth/AskQuestion.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _AskQuestion_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _AskQuestion_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var vue_multiselect_dist_vue_multiselect_min_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-multiselect/dist/vue-multiselect.min.css?vue&type=style&index=0&lang=css& */ "./node_modules/vue-multiselect/dist/vue-multiselect.min.css?vue&type=style&index=0&lang=css&");
+/* empty/unused harmony star reexport *//* harmony import */ var vue_multiselect_dist_vue_multiselect_min_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-multiselect/dist/vue-multiselect.min.css?vue&type=style&index=0&lang=css& */ "./node_modules/vue-multiselect/dist/vue-multiselect.min.css?vue&type=style&index=0&lang=css&");
 /* harmony import */ var _AskQuestion_vue_vue_type_style_index_1_id_310919c3_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AskQuestion.vue?vue&type=style&index=1&id=310919c3&scoped=true&lang=css& */ "./resources/js/components/auth/AskQuestion.vue?vue&type=style&index=1&id=310919c3&scoped=true&lang=css&");
 /* harmony import */ var _AskQuestion_vue_vue_type_style_index_2_id_310919c3_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./AskQuestion.vue?vue&type=style&index=2&id=310919c3&scoped=true&lang=css& */ "./resources/js/components/auth/AskQuestion.vue?vue&type=style&index=2&id=310919c3&scoped=true&lang=css&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
@@ -99660,7 +100054,7 @@ component.options.__file = "resources/js/components/auth/AskQuestion.vue"
 /*!*******************************************************************************!*\
   !*** ./resources/js/components/auth/AskQuestion.vue?vue&type=script&lang=js& ***!
   \*******************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -100063,6 +100457,93 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NavbarComponent_vue_vue_type_template_id_49bd23de___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NavbarComponent_vue_vue_type_template_id_49bd23de___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/auth/SingleJob.vue":
+/*!****************************************************!*\
+  !*** ./resources/js/components/auth/SingleJob.vue ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _SingleJob_vue_vue_type_template_id_d1c73ace_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SingleJob.vue?vue&type=template&id=d1c73ace&scoped=true& */ "./resources/js/components/auth/SingleJob.vue?vue&type=template&id=d1c73ace&scoped=true&");
+/* harmony import */ var _SingleJob_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SingleJob.vue?vue&type=script&lang=js& */ "./resources/js/components/auth/SingleJob.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _SingleJob_vue_vue_type_style_index_0_id_d1c73ace_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SingleJob.vue?vue&type=style&index=0&id=d1c73ace&scoped=true&lang=css& */ "./resources/js/components/auth/SingleJob.vue?vue&type=style&index=0&id=d1c73ace&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _SingleJob_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SingleJob_vue_vue_type_template_id_d1c73ace_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _SingleJob_vue_vue_type_template_id_d1c73ace_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "d1c73ace",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/auth/SingleJob.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/auth/SingleJob.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/auth/SingleJob.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SingleJob_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./SingleJob.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/auth/SingleJob.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SingleJob_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/auth/SingleJob.vue?vue&type=style&index=0&id=d1c73ace&scoped=true&lang=css&":
+/*!*************************************************************************************************************!*\
+  !*** ./resources/js/components/auth/SingleJob.vue?vue&type=style&index=0&id=d1c73ace&scoped=true&lang=css& ***!
+  \*************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_SingleJob_vue_vue_type_style_index_0_id_d1c73ace_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader??ref--7-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./SingleJob.vue?vue&type=style&index=0&id=d1c73ace&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/auth/SingleJob.vue?vue&type=style&index=0&id=d1c73ace&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_SingleJob_vue_vue_type_style_index_0_id_d1c73ace_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_SingleJob_vue_vue_type_style_index_0_id_d1c73ace_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_SingleJob_vue_vue_type_style_index_0_id_d1c73ace_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_SingleJob_vue_vue_type_style_index_0_id_d1c73ace_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_SingleJob_vue_vue_type_style_index_0_id_d1c73ace_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/auth/SingleJob.vue?vue&type=template&id=d1c73ace&scoped=true&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/components/auth/SingleJob.vue?vue&type=template&id=d1c73ace&scoped=true& ***!
+  \***********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SingleJob_vue_vue_type_template_id_d1c73ace_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./SingleJob.vue?vue&type=template&id=d1c73ace&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/auth/SingleJob.vue?vue&type=template&id=d1c73ace&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SingleJob_vue_vue_type_template_id_d1c73ace_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SingleJob_vue_vue_type_template_id_d1c73ace_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

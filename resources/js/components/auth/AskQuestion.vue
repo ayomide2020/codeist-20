@@ -206,7 +206,10 @@ import NavbarComponent from "./NavbarComponent";
 
 export default {
   props: {
-    source: String
+    source: String,
+    question: {
+      type: Object
+    }
   },
   components: {
     editor: Editor,

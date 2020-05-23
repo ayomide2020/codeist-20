@@ -4,7 +4,7 @@
            <!-- <a class="navbar-brand text-dark" href="/"><img src="canvas/favicon.ico" width="150" height="150" alt="favicon"></a> -->
 
             <a class="navbar-brand text-dark" href="/">
-                <img src="https://res.cloudinary.com/oluwatobi/image/upload/v1588016930/codeist/LogoSample_ByTailorBrands_1_bhqryu.jpg" width="150" height="150" alt="">
+                <img src="https://res.cloudinary.com/oluwatobi/image/upload/v1588016930/codeist/LogoSample_ByTailorBrands_1_bhqryu.jpg" width="150" height="150" alt="Codeist">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -13,13 +13,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                 <li class="nav-item active mr-5">
-                    <a class="nav-link text-white" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link text-dark" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item mr-5">
-                    <a class="nav-link text-white" href="/login">Sign In</a>
+                    <a class="nav-link text-dark" href="/login">Sign In</a>
                 </li>
                 <li class="nav-item mr-5">
-                    <a class="nav-link text-white" href="/register">Sign Up</a>
+                    <a class="nav-link text-dark" href="/register">Sign Up</a>
                 </li>
                 </ul>
             </div>
@@ -47,6 +47,6 @@
 }
 
 .bg-color{
-    background: #6c63ff;
+    background: #fff;
 }
 </style>

@@ -2016,17 +2016,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "navbar",
   data: function data() {
@@ -66908,171 +66897,176 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "nav",
-    { staticClass: "bg navbar navbar-dark fixed-top py-5" },
-    [
-      _vm._v(
-        '\n<<<<<<< HEAD\n      class="cta d-flex justify-content-between col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 px-0">\n=======\n<<<<<<< HEAD\n      class="cta d-flex justify-content-between col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 px-0">\n=======\n<<<<<<< HEAD\n      class="cta d-flex justify-content-between col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 px-0"\n=======\n      class="d-flex justify-content-between col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 px-0"\n>>>>>>> eff1e587fbb12c014d3f325de6550f8abc530433\n    >\n>>>>>>> af2f7b16223a80780da2601720c032de6cfdb7f2\n>>>>>>> 4b04d9156adf1afc826ae3c484f3609629f1e360\n      '
-      ),
-      _vm._t("extra"),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "align-items-center" },
-        [
-          _c(
-            "router-link",
-            {
-              staticClass: "text-muted text-decoration-none",
-              attrs: { to: { name: "tags" } }
-            },
-            [_vm._v("Tags")]
-          ),
-          _vm._v(" "),
-          _c(
-            "router-link",
-            {
-              staticClass: "text-muted text-decoration-none ml-3",
-              attrs: { to: { name: "topics" } }
-            },
-            [_vm._v("Topics")]
-          ),
-          _vm._v(" "),
-          _vm.user
-            ? _c(
-                "div",
-                { staticClass: "btn-group" },
-                [
-                  _vm._t("actions"),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "dropdown" }, [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "nav-link p-0",
-                        attrs: {
-                          href: "#",
-                          id: "dropdownMenu",
-                          role: "button",
-                          "data-toggle": "dropdown",
-                          "aria-haspopup": "true",
-                          "aria-expanded": "false"
-                        }
-                      },
-                      [
-                        _c("img", {
-                          staticClass: "rounded-circle my-0 shadow-inner ml-3",
-                          staticStyle: { width: "31px" },
-                          attrs: { src: _vm.avatar, alt: _vm.user.name }
-                        })
-                      ]
-                    ),
+  return _c("nav", { staticClass: "bg navbar navbar-dark fixed-top py-5" }, [
+    _c(
+      "div",
+      {
+        staticClass:
+          "cta d-flex justify-content-between col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 px-0"
+      },
+      [
+        _vm._t("extra"),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "align-items-center" },
+          [
+            _c(
+              "router-link",
+              {
+                staticClass: "text-muted text-decoration-none",
+                attrs: { to: { name: "tags" } }
+              },
+              [_vm._v("Tags")]
+            ),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass: "text-muted text-decoration-none ml-3",
+                attrs: { to: { name: "topics" } }
+              },
+              [_vm._v("Topics")]
+            ),
+            _vm._v(" "),
+            _vm.user
+              ? _c(
+                  "div",
+                  { staticClass: "btn-group" },
+                  [
+                    _vm._t("actions"),
                     _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass: "dropdown-menu dropdown-menu-right",
-                        attrs: { "aria-labelledby": "dropdownMenu" }
-                      },
-                      [
-                        _c("h6", { staticClass: "dropdown-header" }, [
-                          _vm._v(
-                            "\n                " +
-                              _vm._s(_vm.user.name) +
-                              "\n                "
+                    _c("div", { staticClass: "dropdown" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "nav-link p-0",
+                          attrs: {
+                            href: "#",
+                            id: "dropdownMenu",
+                            role: "button",
+                            "data-toggle": "dropdown",
+                            "aria-haspopup": "true",
+                            "aria-expanded": "false"
+                          }
+                        },
+                        [
+                          _c("img", {
+                            staticClass:
+                              "rounded-circle my-0 shadow-inner ml-3",
+                            staticStyle: { width: "31px" },
+                            attrs: { src: _vm.avatar, alt: _vm.user.name }
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "dropdown-menu dropdown-menu-right",
+                          attrs: { "aria-labelledby": "dropdownMenu" }
+                        },
+                        [
+                          _c("h6", { staticClass: "dropdown-header" }, [
+                            _vm._v(
+                              "\n              " +
+                                _vm._s(_vm.user.name) +
+                                "\n              "
+                            ),
+                            _c("br"),
+                            _vm._v(
+                              "\n              " +
+                                _vm._s(_vm.user.email) +
+                                "\n            "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "dropdown-divider" }),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass: "dropdown-item",
+                              attrs: { href: "/" + _vm.canvasPath + "/posts" }
+                            },
+                            [_vm._v("Posts")]
                           ),
-                          _c("br"),
-                          _vm._v(
-                            "\n                " +
-                              _vm._s(_vm.user.email) +
-                              "\n              "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "dropdown-divider" }),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: { href: "/" + _vm.canvasPath + "/posts" }
-                          },
-                          [_vm._v("Posts")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: { href: "/" + _vm.canvasPath + "/tags" }
-                          },
-                          [_vm._v("Tags")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: { href: "/" + _vm.canvasPath + "/topics" }
-                          },
-                          [_vm._v("Topics")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: { href: "/" + _vm.canvasPath + "/stats" }
-                          },
-                          [_vm._v("Stats")]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "dropdown-divider" }),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: { href: "/" + _vm.canvasPath + "/settings" }
-                          },
-                          [_vm._v("Settings")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "dropdown-item",
-                            staticStyle: { cursor: "pointer" },
-                            on: {
-                              click: function($event) {
-                                $event.preventDefault()
-                                return _vm.sessionLogout($event)
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass: "dropdown-item",
+                              attrs: { href: "/" + _vm.canvasPath + "/tags" }
+                            },
+                            [_vm._v("Tags")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass: "dropdown-item",
+                              attrs: { href: "/" + _vm.canvasPath + "/topics" }
+                            },
+                            [_vm._v("Topics")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass: "dropdown-item",
+                              attrs: { href: "/" + _vm.canvasPath + "/stats" }
+                            },
+                            [_vm._v("Stats")]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "dropdown-divider" }),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass: "dropdown-item",
+                              attrs: {
+                                href: "/" + _vm.canvasPath + "/settings"
                               }
-                            }
-                          },
-                          [_vm._v("Sign out")]
-                        )
-                      ]
-                    )
-                  ])
-                ],
-                2
-              )
-            : _c(
-                "a",
-                {
-                  staticClass: "text-muted text-decoration-none ml-3",
-                  attrs: { href: "/login" }
-                },
-                [_vm._v("Sign in")]
-              )
-        ],
-        1
-      )
-    ],
-    2
-  )
+                            },
+                            [_vm._v("Settings")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass: "dropdown-item",
+                              staticStyle: { cursor: "pointer" },
+                              on: {
+                                click: function($event) {
+                                  $event.preventDefault()
+                                  return _vm.sessionLogout($event)
+                                }
+                              }
+                            },
+                            [_vm._v("Sign out")]
+                          )
+                        ]
+                      )
+                    ])
+                  ],
+                  2
+                )
+              : _c(
+                  "a",
+                  {
+                    staticClass: "text-muted text-decoration-none ml-3",
+                    attrs: { href: "/login" }
+                  },
+                  [_vm._v("Sign in")]
+                )
+          ],
+          1
+        )
+      ],
+      2
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -67259,7 +67253,7 @@ var render = function() {
     [
       _c("vue-headful", {
         attrs: {
-          title: "Studio — A Laravel publishing platform",
+          title: "Studio — A Codeist publishing platform",
           description:
             "Sometimes creating a blog is easier said than done. With Canvas, it's just easier."
         }
@@ -67356,7 +67350,7 @@ var render = function() {
             _c("h1", { staticClass: "font-serif" }, [_vm._v("Studio")]),
             _vm._v(" "),
             _c("p", { staticClass: "lead text-secondary" }, [
-              _vm._v("A Laravel Publishing Platform")
+              _vm._v("A Codeist Publishing Platform")
             ]),
             _vm._v(" "),
             _c("main", { staticClass: "mt-5", attrs: { role: "main" } }, [

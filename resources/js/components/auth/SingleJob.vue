@@ -9,34 +9,53 @@
           <div
             class="container-fluid border-bottom pb-5 m-0 row justify-content-between align-items-start"
           >
-            
-            <div class="m-0 p-0 col-2">
-              <a href="/question" class="btn btn-outline-primary">Ask Question</a>
+            <div class="m-0 p-0 col-10">
+              <h4 class="mb-5 ml-3 font-weight-bold">{{ job.title }}</h4>
+              <p class="mb-5 ml-3 font-weight-bold">{{ job.company }}</p>
+              <span class="ml-3">
+                <i class="fa fa-clock"></i>
+                Posted:
+                <b>{{ job.date }}</b>
+              </span>
             </div>
-          </div>
+            <div class="m-0 p-0 col-2">
+              <a href="/job" class="btn btn-outline-primary">Post Job</a>
+            </div>
 
-          <div class="mt-5 col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12">
-            <!-- Question -->
+
+          <div class="mt-5 col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+            <!-- Job -->
             <div class="container-fluid row m-0 bg-grey px-3 py-5">
-              <!-- <div class="col-1">
-                <vote :question="question"></vote>
-              </div> -->
-              <div class="col-11">
-                <span></span>
+              <div class="col-12">
+                  Technologies:<br/>
+                <span v-html="job.tag"></span>
                 <a
                   href="#"
-                  v-for="tag in question.tag_ids"
+                  v-for="tag in job.tag_ids"
                   :key="tag.id"
                   class="mt-5 mr-2 badge badge-info text-white py-2 px-4"
                 >{{ tag.name }}</a>
+                <hr class="space-top-3" />
+              </div>
+
+              <div class="col-12">
+                  <div>
+                  Job description:<br/><br/>
+                  <span v-html="job.description">
+                  {{ job.description }}</span>
+                  <hr class="space-top-3" />
+                </div>
+              </div>
+
+              <div class="col-12">
+                  Salary:<br/><br/>
+                <span>{{ job.amount_from }} - {{ job.amount_to }}</span>
+                <hr class="space-top-3" />
               </div>
             </div>
 
-            <!-- Answers -->
             <div class="space-top-5">
-              <h4 class="mb-5 font-weight-bold">{{  }} Answers</h4>
-
-              <!-- If there are no answers -->
+              <!-- If there are no job post -->
               <div v-if="job.length == 0" class="container-fluid bg-grey px-3 py-5">
                 <div class="mt-5">
                   <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -44,53 +63,48 @@
                       <span aria-hidden="true">&times;</span>
                       <span class="sr-only">Close</span>
                     </button>
-                    <strong>Oops!</strong> This question hasn't been answered by anyone yet. Be the first to do so.
+                    <strong>Oops!</strong> No Job Post yet. Be the first to do so.
                   </div>
                 </div>
               </div>
 
-              <!-- If there are answers -->
+              <!-- If there are jobs -->
               <div v-else class="container-fluid bg-grey px-3 py-5">
-                <div class="space-top-3">
-                  <span></span>
+                <div class="space-top-3" v-for="job in jobs" :key="job.id">
+                  <span v-html="job.job"></span>
                   <hr class="space-top-3" />
                 </div>
               </div>
             </div>
 
-            
-            <!-- Provide your Answer -->
-            <div class="space-top-5 container-fluid px-3 py-5">
-              <h4>Your Answer</h4>
-              <your-answer></your-answer>
-            </div>
           </div>
 
           <div
-            class="mt-5 p-0 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 d-none d-xl-block d-lg-block d-md-block"
+            class="mt-5 p-0 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 d-none d-xl-block d-lg-block d-md-block"
           >
-            <article-card></article-card>
             <job-card class="mt-5"></job-card>
           </div>
         </div>
       </div>
+    </div>
     </v-content>
   </v-app>
 </div>
 </template>
 
 <script>
-import ArticleCard from "./ArticleCard";
+import JobCard from "./JobCard";
 import NavbarComponent from "./NavbarComponent";
 
 export default {
   props: {
-    question: {
+    job: {
       type: Object
     },
   },
 
   components: {
+    JobCard,
     NavbarComponent
   },
 
@@ -98,6 +112,7 @@ export default {
 
   data: () => ({
     url: window.location.href,
+    jobs: []
   }),
 
   methods: {

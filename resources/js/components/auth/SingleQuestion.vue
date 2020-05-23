@@ -84,20 +84,20 @@
               <div class="d-flex mt-4">
                 <div>
                   <a
-                    :href="'https://twitter.com/share?url=' + url"
+                    :href="'https://twitter.com/share?url=' + url" target="_blank"
                     class="btn btn-outline-dark"
                   >Twitter</a>
                 </div>
 
                 <div class="ml-3">
                   <a
-                    :href="'https://www.facebook.com/sharer/sharer.php?u=#' + url"
+                    :href="'https://www.facebook.com/sharer/sharer.php?u=#' + url" target="_blank"
                     class="btn btn-outline-dark"
                   >Facebook</a>
                 </div>
 
                 <div class="ml-3">
-                  <a href="#" @click="doCopy" class="btn btn-outline-dark">Copy link</a>
+                  <a href="#" @click="doCopy" target="_blank" class="btn btn-outline-dark">Copy link</a>
                 </div>
               </div>
             </div>

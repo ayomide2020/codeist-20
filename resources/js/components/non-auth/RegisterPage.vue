@@ -7,7 +7,6 @@
             <v-card class="elevation-12">
               <v-toolbar color dark flat>
                 <v-toolbar-title>Continue to create a free Account</v-toolbar-title>
-
                 <v-spacer />
               </v-toolbar>
               <validation-error :errors="validationErrors" v-if="validationErrors"></validation-error>
@@ -123,7 +122,7 @@ export default {
         first_name: this.firstname,
         last_name: this.lastname,
         email: this.email,
-        password: this.password
+        password: this.password,  
       };
 
       axios
@@ -140,6 +139,7 @@ export default {
           console.log(error);
           this.validationErrors = error.response.data.errors;
           this.isloading = false;
+          this.passError = "";
         });
     }
   }

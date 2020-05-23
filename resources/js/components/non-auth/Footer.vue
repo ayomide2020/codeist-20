@@ -41,14 +41,15 @@
                                 <a href="#"><img src="https://res.cloudinary.com/oluwatobi/image/upload/v1587328895/codeist/hero_vc2d4d.svg" class="img-fluid" alt="logo"></a>
                             </div>
                             <div class="footer-text">
-                                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
-                                elit,Lorem ipsum dolor sit amet.</p>
+                                <p>Get your coding questions answered to learn, build, and level up whether you’re beginning with JavaScript or a React professional. </p>
                             </div>
+                            
                             <div class="footer-social-icon">
                                 <span>Follow us</span>
-                                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
-                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                                <a href="#" target="_blank"
+                                class="btn btn-outline-primary"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="#" target="_blank" class="btn btn-outline-info"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="#" target="_blank" class="btn btn-outline-info"><i class="fab fa-google-plus-g google-bg"></i></a>
                             </div>
                         </div>
                     </div>
@@ -58,13 +59,14 @@
                                 <h3>Useful Links</h3>
                             </div>
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Profile</a></li>
-                                <li><a href="#">Article</a></li>
-                                <li><a href="#">portfolio</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Questions</a></li>
-                                <li><a href="#">Jobs</a></li>
+                                <li><a href="/">Home</a></li>
+                                <!-- <li><a href="#">Profile</a></li> -->
+                                <li><a href="/canvas">Article World</a></li>
+                                <!-- <li><a href="#">portfolio</a></li> -->
+                                <!-- <li><a href="#">Contact</a></li> -->
+                                <li><a href="/tag">Tags</a></li>
+                                <li><a href="/question">Questions</a></li>
+                                <li><a href="/job">Jobs</a></li>
                             </ul>
                         </div>
                     </div>
@@ -93,7 +95,7 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-6 text-center text-lg-left">
                         <div class="copyright-text">
-                            <p>Copyright &copy; 2020, All Right Reserved <a href="">Codeist</a></p>
+                            <p>Copyright &copy; 2020, All Right Reserved <a href="/">Codeist</a></p>
                         </div>
                     </div>
                 </div>
@@ -107,7 +109,10 @@
 export default {
     mounted() {
             console.log('Component mounted test.')
-    }   
+    },   
+    data:() => ({
+      url: window.location.href,
+    }),
 }
 </script>
 

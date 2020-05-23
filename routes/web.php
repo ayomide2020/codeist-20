@@ -40,7 +40,7 @@ Route::get('/jobs', 'JobController@index');
 Route::get('/job', 'JobController@create');
 Route::post('/jobs', 'JobController@store');
 Route::get('/jobs/randomfive', 'JobController@showfiveJobs');
-
+Route::get('/job/{job}', 'JobController@show');
 
 
 // Article/Post Routes

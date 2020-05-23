@@ -15,6 +15,12 @@ class Job extends Model
         'tag_ids' => 'array',
     ];
 
+    protected $appends = ['date'];
+
+    public function getDateAttribute()
+    {
+        return $this->created_at->diffForHumans();
+    }
 
     public function user() 
     {

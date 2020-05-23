@@ -1,61 +1,62 @@
 <template>
 <div>
-  <v-app id="inspire">
+<v-app id="inspire">
   <navbar-component></navbar-component>
     <!-- Content -->
     <v-content class="m-0">
-        <div class="container-fluid p-0 font-serif">
-          <validation-error :errors="validationErrors" v-if="validationErrors"></validation-error>
-          <h3><p class="mb-0 ml-5 font-weight-bold text-dark">Post Job</p></h3>
-          <v-row justify="between">
-            <v-col cols="12" sm="10" md="8" lg="8">
-              <v-card ref="form" method="POST">
-                <v-card-text>
-                  <form>
-                  <v-text-field
+    <div class="container-fluid p-0 font-serif">
+      <validation-error :errors="validationErrors" v-if="validationErrors"></validation-error>
+      <form action class="container-fluid p-4" method="POST">
+      <div class="row">
+        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-12 px-2 py-3 mt-5">
+          <h2><p class="mb-0 ml-5 font-weight-bold text-dark">Post Job</p></h2>
+          <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12 px-2 py-3 mb-5">
+                  <input
                     type="text"
-                    id="title"
-                    ref="title"
+                    name="title"
                     v-model="title"
-                    label="Title"
+                    id="title"
+                    class="form-control pr-0 p-4 mb-4 form"
                     placeholder="Title"
-                    outlined
-                    required
-                  ></v-text-field>
-                  <v-text-field
+                    autocomplete="off"
+                    autofocus
+                  />
+                  <input
                     type="text"
-                    id="company"
-                    ref="company"
+                    name="Company"
                     v-model="company"
-                    label="Company"
-                    placeholder="company"
-                    outlined
-                    required
-                  ></v-text-field>
-                  <v-text-field
+                    id="company"
+                    class="form-control pr-0 p-4 mb-4 form"
+                    placeholder="Company"
+                    autocomplete="off"
+                    autofocus
+                  />
+                  <input
                     type="text"
-                    id="location"
-                    ref="location"
+                    name="location"
                     v-model="location"
-                    label="Location"
-                    placeholder="location"
-                    outlined
-                    required
-                  ></v-text-field>
-
-                  <label for="salary" class="">Salary</label>
+                    id="location"
+                    class="form-control pr-0 p-4 mb-4 form"
+                    placeholder="Location"
+                    autocomplete="off"
+                    autofocus
+                  />
+                
+                
+                <label for="salary" class="">Salary</label>
                   <v-row>
-                    <!-- <v-col>
-                    <v-text-field
-                      v-model="currency"
-                      label="$"
-                      type="currency"
-                      name="currency"
-                      outlined
-                    ></v-text-field>
-                  </v-col> -->
-                  
-                  <v-col>
+                    <v-col cols="12" sm="2" md="2" lg="2">
+                    <multiselect
+                    v-model="tags"
+                    placeholder="Add a tag"
+                    label="name"
+                    :options="options"
+                    track-by="name"
+                    :multiple="true"
+                    :taggable="true"
+                    ></multiselect>
+                    </v-col>
+                  <v-col cols="12" sm="5" md="5" lg="5">
                     <v-text-field
                       v-model="amount_from"
                       label="From"
@@ -66,7 +67,7 @@
                     ></v-text-field>
                   </v-col>
                   
-                  <v-col>
+                  <v-col cols="12" sm="5" md="5" lg="5">
                     <v-text-field
                       v-model="amount_to"
                       label="To"
@@ -77,8 +78,9 @@
                     ></v-text-field>
                   </v-col>
                 </v-row>
-              <div class="mt-5">
-                <multiselect
+
+                  <div class="mt-5">
+                  <multiselect
                     v-model="tags"
                     tag-placeholder="Add this as new tag"
                     placeholder="Search or Add a tag"
@@ -88,10 +90,12 @@
                     :multiple="true"
                     :taggable="true"
                     @tag="addTag"
-                ></multiselect>
-              </div>
+                    ></multiselect>
+                  </div>
+          </div>
 
-        <h4 class="text-dark my-5">Job Description</h4>
+        <h4 class="text-dark ml-5 mb-4">Job Description</h4>
+        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12 px-2 py-3 mb-5">
         <editor
           v-model="description"
           api-key="s0a0a2vky79uza8yzxwbe4khvedd7mdehfrp4e1b4rxoplw4"
@@ -121,18 +125,11 @@
                         alignleft aligncenter alignright alignjustify | \
                         bullist numlist outdent indent | removeformat | help'
                     }"
-              />
-                  </form>
-                </v-card-text>
-                <v-divider class="mt-12"></v-divider>
-                <v-card-actions>
-                  <v-btn text>Cancel</v-btn>
-                  <v-spacer></v-spacer>
-                  <v-btn color="primary" text @click="postJob">Post Job</v-btn>
-                </v-card-actions>
-              </v-card>
-              
-              <!-- Show Success Alert on Successful Creation of Job -->
+        />
+      </div>
+      <a class="btn btn-outline-primary mt-5" @click="postJob">Post Job</a>
+
+      <!-- Show Success Alert on Successful Creation of Job -->
                 <div
                   class="alert alert-success alert-dismissible fade mt-5 show"
                   v-if="success"
@@ -148,16 +145,18 @@
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-
-            </v-col>
-            <v-col cols="12" sm="10" md="4" lg="3">
-            <job-card class="mt-2"></job-card>
-          </v-col>
-          </v-row>
-          
+      
         </div>
-        </v-content>
-      </v-app>
+          <div
+            class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-12 d-none d-xl-block d-lg-block d-md-block"
+          >
+            <job-card class="mt-2"></job-card>
+          </div>
+    </div>
+    </form>
+    </div>
+    </v-content>
+  </v-app>
 </div>
 </template>
 
@@ -170,7 +169,7 @@ import NavbarComponent from "./NavbarComponent";
 
 export default {
   props: {
-    source: String,
+    source: String
   },
   components: {
     editor: Editor,
@@ -194,7 +193,6 @@ export default {
     description: "",
     amount_from: "",
     amount_to: "",
-    currency: "",
     tags: [],
     user: {},
     options: [],
@@ -241,7 +239,6 @@ export default {
         description: this.description,
         amount_from: this.amount_from,
         amount_to: this.amount_to,
-        currency: this.currency,
       };
       axios
         .post("/jobs", data)
@@ -255,7 +252,6 @@ export default {
           this.tags = [];
           this.amount_from = "";
           this.amount_to = "";
-          this.currency="";
         })
         .catch(error => {
           if (error.response.status == 422) {
@@ -276,4 +272,8 @@ export default {
 .font-size {
   font-size: 12px;
 }
+/* .bg-grey{
+    background-color: lightgray;
+    opacity: 1.0;
+} */
 </style>

@@ -55,9 +55,11 @@ class JobController extends Controller
             "company" => ['required', 'min: 10', 'string'],
             "location" => ['required', 'min: 10', 'string'],
             "description" => ['required', 'min: 20'],
-        ]);
-
-
+            // "amount_from" => ['required', 'regex:/^[0-9]{1,3}(,[0-9]{3})*\.[0-9]{0,2}+$/']
+        ]);  
+    
+        // $product->price=Input::get('price');
+    
         $createJob = Job::create($request->all());
 
         if($createJob){
@@ -76,7 +78,7 @@ class JobController extends Controller
      */
     public function show(Job $job)
     {
-        //
+        return view('job.show', compact('job'));
     }
 
     /**

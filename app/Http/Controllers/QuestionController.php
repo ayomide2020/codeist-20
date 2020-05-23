@@ -18,8 +18,6 @@ class QuestionController extends Controller
     public function index()
     {
         return Question::with('user')->withCount('answers')->latest()->get();
-
-        
     }
 
     /**

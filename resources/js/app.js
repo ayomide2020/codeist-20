@@ -41,6 +41,7 @@ Vue.component('validation-error', require('./components/non-auth/ValidationError
 Vue.component('dashboard-component', require('./components/auth/Dashboard.vue').default);
 Vue.component('ask_question-component', require('./components/auth/AskQuestion.vue').default);
 Vue.component('single_question-component', require('./components/auth/SingleQuestion.vue').default);
+Vue.component('single_job-component', require('./components/auth/SingleJob.vue').default);
 Vue.component('tag-component', require('./components/auth/Tag.vue').default);
 Vue.component('job-component', require('./components/auth/Job.vue').default);
 Vue.component('tag-component', require('./components/auth/Tag.vue').default);

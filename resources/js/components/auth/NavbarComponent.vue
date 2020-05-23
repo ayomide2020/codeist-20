@@ -3,7 +3,7 @@
     <v-navigation-drawer v-model="drawer" :clipped="$vuetify.breakpoint.lgAndUp" app>
       <v-list dense>
         <template v-for="item in items">
-          <v-list-item :key="item.text" :href="item.href" class="link" link>
+          <v-list-item :key="item.text" :href="item.href" :target="item.target" class="link" link>
             <v-list-item-action>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-action>
@@ -53,12 +53,12 @@
       />
       <v-spacer />
 
-      <v-btn icon>
+      <v-btn icon href="/">
         <v-icon>mdi-apps</v-icon>
       </v-btn>
-      <v-btn icon>
+      <!-- <v-btn icon>
         <v-icon>mdi-bell</v-icon>
-      </v-btn>
+      </v-btn> -->
     </v-app-bar>
 </div>
 </template>
@@ -69,12 +69,12 @@ export default {
     data: () => ({
     drawer: null,
     items: [
-      { icon: "mdi-contacts", text: "Home", href: "/home" },
-      { icon: "mdi-message-text", text: "Question", href: "/question" },
-      { icon: "mdi-content-copy", text: "Tags", href: "/tag" },
-      { icon: "mdi-contact-mail", text: "Article World", href: "/canvas" },
-      { icon: "mdi-history", text: "Job", href: "/job" },
-      { icon: "mdi-settings", text: "Settings", href: "/settings" }
+      { icon: "mdi-contacts", text: "Home", href: "/home", target: "_self" },
+      { icon: "mdi-message-text", text: "Ask Question", href: "/question", target: "_self" },
+      { icon: "mdi-content-copy", text: "Manage Tags", href: "/tag", target: "_self" },
+      { icon: "mdi-history", text: "Job", href: "/job", target: "_self" },
+      { icon: "mdi-contact-mail", text: "Article World", href: "/canvas", target: "_blank" },
+      // { icon: "mdi-settings", text: "Settings", href: "/settings", target: "_self" }
     ],
   }),
 
